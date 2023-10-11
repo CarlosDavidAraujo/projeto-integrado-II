@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://di7uyv6afqfmi"]
+
+[ext_resource type="PackedScene" uid="uid://8hr38yv7or1i" path="res://ground.tscn" id="1_48ik3"]
+[ext_resource type="PackedScene" uid="uid://04d3jkhhevua" path="res://player_com_camera_perspectiva.tscn" id="2_rpevu"]
+
+[node name="TesteCameraPerspectiva" type="Node"]
+
+[node name="Ground" parent="." instance=ExtResource("1_48ik3")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -1, 0)
+
+[node name="PlayerComCamera" parent="." instance=ExtResource("2_rpevu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

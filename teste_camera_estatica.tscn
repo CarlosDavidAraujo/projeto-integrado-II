@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7qytj258askk"]
+
+[ext_resource type="PackedScene" uid="uid://8hr38yv7or1i" path="res://ground.tscn" id="1_7p0lr"]
+[ext_resource type="PackedScene" uid="uid://bgwvhiqv7pye4" path="res://player_sem_camera.tscn" id="2_41h76"]
+[ext_resource type="PackedScene" uid="uid://diw7jbhy40b3" path="res://camera_pivot.tscn" id="3_y3c0p"]
+
+[node name="TesteCameraEstatica" type="Node"]
+
+[node name="Ground" parent="." instance=ExtResource("1_7p0lr")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -1, 0)
+
+[node name="PlayerSemCamera" parent="." instance=ExtResource("2_41h76")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="CameraPivot" parent="." instance=ExtResource("3_y3c0p")]
