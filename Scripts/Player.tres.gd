@@ -1,42 +1,44 @@
 extends CharacterBody3D
 
-# How fast the player moves in meters per second.
 @export var speed = 14
-# The downward acceleration when in the air, in meters per second squared.
-@export var fall_acceleration = 75
-
+@onready var animation_player = $Pivot/personagem_idle/AnimationPlayer
 var target_velocity = Vector3.ZERO
-
+var isAttacking = false
 
 func _physics_process(delta):
+	#Controle de movimento
 	var direction = Vector3.ZERO
-
 	if Input.is_action_pressed("move_right"):
-		direction.z -= 1
 		direction.x += 1
 	if Input.is_action_pressed("move_left"):
-		direction.z += 1
 		direction.x -= 1
 	if Input.is_action_pressed("move_back"):
-		direction.x += 1
 		direction.z += 1
 	if Input.is_action_pressed("move_forward"):
-		direction.x -= 1
 		direction.z -= 1
-		
 
+	#Animaçao do movimento
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
-		$MeshInstance3D.look_at(position + direction, Vector3.UP)
+		$Pivot.look_at(position + direction, Vector3.UP)
+		if not isAttacking:
+			animation_player.play("Aanim Run cycle")
+	else:
+		if not isAttacking:
+			animation_player.play("Aanim Idle cycle")
 
-	# Ground Velocity
+	#Animacao de ataque
+	if Input.is_action_just_pressed("light_attack") and not isAttacking:
+		isAttacking = true
+		animation_player.play("Aanim attack 01")
+		await animation_player.animation_finished
+		isAttacking = false
+	
+	#Movimentando o personagem
 	target_velocity.x = direction.x * speed
 	target_velocity.z = direction.z * speed
 
-	# Vertical Velocity
-	if not is_on_floor(): # If in the air, fall towards the floor. Literally gravity
-		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
-
-	# Moving the Character
 	velocity = target_velocity
 	move_and_slide()
+
+
