@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://qq1mn71fbpoa"]
+
+[ext_resource type="PackedScene" uid="uid://cmp4lebu2ekn1" path="res://Scenes/Player.tscn" id="1_hb7re"]
+[ext_resource type="PackedScene" uid="uid://8hr38yv7or1i" path="res://Scenes/Ground.tscn" id="2_junw0"]
+[ext_resource type="PackedScene" uid="uid://e4ofc2oa35kc" path="res://Scenes/SpiritWolf.tscn" id="3_0a8mp"]
+
+[node name="Main" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_hb7re")]
+transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, 0, 1.03039, 0)
+
+[node name="Ground" parent="." instance=ExtResource("2_junw0")]
+transform = Transform3D(0.212132, 0, 0.212132, 0, 0.3, 0, -0.212132, 0, 0.212132, 0, 0, 0)
+
+[node name="SpiritWolf" parent="." instance=ExtResource("3_0a8mp")]
+transform = Transform3D(4.24264, 0, 4.24264, 0, 6, 0, -4.24264, 0, 4.24264, -20.4574, 2.52617, -2.8639)
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LifeBar" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 100.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "XXXXX"
+vertical_alignment = 1
+
+[node name="LifeLabel" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "VIDA:"
+vertical_alignment = 1

@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://diw7jbhy40b3"]
-
-[node name="CameraPivot" type="Node3D"]
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 10, 10)
-projection = 1
-size = 40.0
