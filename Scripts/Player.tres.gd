@@ -39,28 +39,29 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("light_attack") and not isAttacking:
 		isAttacking = true
 		animation_player.play("Aanim attack 01",0.2)
-		await animation_player.animation_finished
-		isAttacking = false
+		hitbox.monitoring = true
 		
 	#Controle de ataque pesado
 	if Input.is_action_just_pressed("heavy_attack") and not isAttacking:
 		isAttacking = true
 		animation_player.play("Aanim attack_02",0.2)
-		await animation_player.animation_finished
-		isAttacking = false
+		hitbox.monitoring = true
 	
 	#Movimentando o personagem
 	target_velocity.x = direction.x * speed
 	target_velocity.z = direction.z * speed
 	velocity = target_velocity
-	
+
 	move_and_slide()
 	_updateAnimation()
 	
-func _on_hitbox_body_entered(body):
-	print(body)
-	if body.has_method("hurt"):
-		body.hurt()
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "Aanim attack_02" or anim_name == "Aanim attack 01":
+		isAttacking = false
+		animation_player.play("Aanim Idle cycle")
+		hitbox.monitoring = false	
 
-
-
+func _on_hit_box_body_entered(body):
+	if body.is_in_group("mob"):
+		if body.has_method("hurt"):
+			body.hurt()
