@@ -1,6 +1,7 @@
 extends CharacterBody3D
+class_name Player
 
-@export var speed = 14
+@export var speed = 30
 @onready var animation_player = $Pivot/personagem_idle/AnimationPlayer
 @onready var hitbox = $Pivot/personagem_idle/rig/Skeleton3D/WeaponAttachment/HitBox
 var target_velocity = Vector3.ZERO

@@ -11,10 +11,11 @@
 transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, 0, 0.5, 0)
 
 [node name="Ground" parent="." instance=ExtResource("2_junw0")]
-transform = Transform3D(0.212132, 0, 0.212132, 0, 0.3, 0, -0.212132, 0, 0.212132, 0, 0, 0)
+transform = Transform3D(2.82843, 0, 2.82843, 0, 0.3, 0, -2.82843, 0, 2.82843, 0, 0, 0)
 
-[node name="Wolf" parent="." instance=ExtResource("4_je7xd")]
+[node name="Wolf" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_je7xd")]
 transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, -24, 0.5, 0)
+player = NodePath("../Player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
