@@ -881,6 +881,9 @@ bind/282/name = &"thigh_ik_target.R"
 bind/282/bone = -1
 bind/282/pose = Transform3D(1.14383, -0.0414234, 0.195956, 0.195956, 0.466424, -1.04523, -0.0414234, 1.06263, 0.466424, 0.439888, 0.181461, -0.51989)
 
+[sub_resource type="Animation" id="Animation_vrmge"]
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_hdohm"]
 resource_name = "dash"
 length = 1.79167
@@ -6963,9 +6966,6 @@ tracks/288/path = NodePath("rig_principal/Skeleton3D:MCH-front_thigh_parent.R")
 tracks/288/interp = 1
 tracks/288/loop_wrap = true
 tracks/288/keys = PackedFloat32Array(0, 1, 1, 1, 1)
-
-[sub_resource type="Animation" id="Animation_vrmge"]
-length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cxcfq"]
 _data = {

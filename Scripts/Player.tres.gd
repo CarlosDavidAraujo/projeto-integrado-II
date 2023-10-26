@@ -2,8 +2,8 @@ extends CharacterBody3D
 class_name Player
 
 @export var speed = 30
-@onready var animation_player = $Pivot/personagem_idle/AnimationPlayer
-@onready var hitbox = $Pivot/personagem_idle/rig/Skeleton3D/WeaponAttachment/HitBox
+@onready var animation_player = $Pivot/AnimationPlayer
+@onready var hitbox = $Pivot/rig/Skeleton3D/WeaponAtachment/Hitbox
 var target_velocity = Vector3.ZERO
 var isAttacking = false
 var isMoving = false
@@ -62,7 +62,7 @@ func _on_animation_player_animation_finished(anim_name):
 		animation_player.play("Aanim Idle cycle")
 		hitbox.monitoring = false	
 
-func _on_hit_box_body_entered(body):
+func _on_hitbox_body_entered(body):
 	if body.is_in_group("mob"):
 		if body.has_method("hurt"):
 			body.hurt()
