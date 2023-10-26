@@ -24,11 +24,14 @@ func _physics_process(delta):
 	if not isDead:
 		dash()
 		run()
+		
 		if isDashing:
+			#na dash pula na direção atual
 			look_at(position + dashDirection, Vector3(0, 1, 0))
 		else:
-			look_at(player.global_position)
-		
+			#suaviza a rotacao do lobo quando esta correndo
+			rotation.y = lerp_angle(rotation.y, atan2(-playerPosition.x, -playerPosition.z), delta * 2.5)
+
 	stop()
 	move_and_slide()
 	
