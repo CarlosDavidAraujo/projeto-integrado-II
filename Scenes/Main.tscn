@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://qq1mn71fbpoa"]
+[gd_scene load_steps=6 format=3 uid="uid://qq1mn71fbpoa"]
 
 [ext_resource type="PackedScene" uid="uid://cmp4lebu2ekn1" path="res://Scenes/Player.tscn" id="1_hb7re"]
 [ext_resource type="PackedScene" uid="uid://8hr38yv7or1i" path="res://Scenes/Ground.tscn" id="2_junw0"]
 [ext_resource type="Script" path="res://Scripts/EnemyLifeBar.gd" id="4_2sdt5"]
 [ext_resource type="PackedScene" uid="uid://cap7r5gvxah3x" path="res://Scenes/Wolf.tscn" id="4_je7xd"]
+[ext_resource type="PackedScene" uid="uid://cqxdr2yhulmfl" path="res://Scenes/bg.tscn" id="5_xttaf"]
 
 [node name="Main" type="Node"]
 
@@ -11,7 +12,7 @@
 transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, 0, 0.5, 0)
 
 [node name="Ground" parent="." instance=ExtResource("2_junw0")]
-transform = Transform3D(2.82843, 0, 2.82843, 0, 0.3, 0, -2.82843, 0, 2.82843, 0, 0, 0)
+transform = Transform3D(2.82843, 0, 2.82843, 0, 0.3, 0, -2.82843, 0, 2.82843, 0, -27, 0)
 
 [node name="Wolf" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_je7xd")]
 transform = Transform3D(-0.0866312, 0, -3.99906, 0, 4, 0, 3.99906, 0, -0.0866312, -23.4337, 0.5, -1.90734)
@@ -31,3 +32,6 @@ grow_horizontal = 2
 value = 100.0
 script = ExtResource("4_2sdt5")
 enemy = NodePath("../../Wolf")
+
+[node name="bg" parent="." instance=ExtResource("5_xttaf")]
+transform = Transform3D(0.402699, 0, -0.915333, 0, 1, 0, 0.915333, 0, 0.402699, 17, -1.072, -17)
