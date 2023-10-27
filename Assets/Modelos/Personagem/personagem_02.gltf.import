@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b5a60gopxk188"
-path="res://.godot/imported/espirito_02.glb-d57758e4b502d603a3e8aff1a60a48e4.scn"
+uid="uid://bp6nxld3w7c20"
+path="res://.godot/imported/personagem_02.gltf-75e4a9efac4046ff78efff3bd6f26830.scn"
 
 [deps]
 
-source_file="res://Scenes/espirito_02.glb"
-dest_files=["res://.godot/imported/espirito_02.glb-d57758e4b502d603a3e8aff1a60a48e4.scn"]
+source_file="res://Assets/Modelos/Personagem/personagem_02.gltf"
+dest_files=["res://.godot/imported/personagem_02.gltf-75e4a9efac4046ff78efff3bd6f26830.scn"]
 
 [params]
 
