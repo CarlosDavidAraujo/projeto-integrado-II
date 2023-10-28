@@ -3,7 +3,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_8pi3n"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_088g6"]
-albedo_color = Color(0.172549, 0.301961, 0.141176, 1)
+albedo_color = Color(0.27451, 0.356863, 0.0705882, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_qail5"]
 material = SubResource("StandardMaterial3D_088g6")
@@ -19,9 +19,5 @@ transform = Transform3D(200, 0, 0, 0, 2, 0, 0, 0, 200, 0, 0, 0)
 shape = SubResource("BoxShape3D_8pi3n")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(200, 0, 0, 0, 2, 0, 0, 0, 200, 0, 0, 0)
+transform = Transform3D(200, 0, 0, 0, 2, 0, 0, 0, 200, 0.0261726, -0.161324, 0.0180511)
 mesh = SubResource("BoxMesh_qail5")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.258752, 0.965944, 0, -0.965944, 0.258752, 0, 24.4882, -5.15286)
-shadow_enabled = true

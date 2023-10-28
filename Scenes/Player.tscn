@@ -34855,10 +34855,7 @@ metadata/_edit_group_ = true
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 10, 10)
-projection = 1
-size = 40.0
-far = 1000.0
+transform = Transform3D(0.999999, 0.00082358, 0.00106929, -0.00133308, 0.726595, 0.687065, -0.000211093, -0.687065, 0.726596, 0.024, 4.985, 5.545)
 
 [connection signal="body_entered" from="Pivot/rig/Skeleton3D/WeaponAtachment/Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="animation_finished" from="Pivot/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
