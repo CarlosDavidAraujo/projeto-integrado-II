@@ -31931,16 +31931,16 @@ _data = {
 "R_mao relaxada_001": SubResource("Animation_r2wt0")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_w7776"]
-size = Vector3(0.757346, 1.34447, 1.11737)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vy475"]
 
 [node name="Player" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 0.99957, -0.0293174, 0, 0.0293174, 0.99957, 0, 0.142612, 0)
+transform = Transform3D(1, 0, 0, 0, 0.99957, -0.0293174, 0, 0.0293174, 0.99957, 0, 0.0268434, 0)
 collision_mask = 6
 script = ExtResource("1_r13xe")
 metadata/_edit_group_ = true
 
 [node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="rig" type="Node3D" parent="Pivot"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -34847,8 +34847,8 @@ libraries = {
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.999659, 0.0263341, 0, -0.0263341, 0.999659, -0.0449864, 0.643546, 0.0152812)
-shape = SubResource("BoxShape3D_w7776")
+transform = Transform3D(0.63, 0, 0, 0, 0.629782, 0.0165904, 0, -0.0165904, 0.629782, -0.0449864, 0.643546, 0.0152812)
+shape = SubResource("CapsuleShape3D_vy475")
 metadata/_edit_group_ = true
 
 [node name="CameraPivot" type="Node3D" parent="."]

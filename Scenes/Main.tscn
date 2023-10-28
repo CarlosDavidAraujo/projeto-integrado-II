@@ -10,13 +10,13 @@
 [node name="Main" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("1_hb7re")]
-transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, 0, 0.5, 0)
+transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, 0, -0.198846, 0)
 
 [node name="Ground" parent="." instance=ExtResource("2_junw0")]
 transform = Transform3D(10.2566, 0, 9.50351, 0, 0.3, 0, -10.2566, 0, 9.50351, 0, -27, 0)
 
 [node name="Wolf" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_je7xd")]
-transform = Transform3D(-0.0866312, 0, -3.99906, 0, 4, 0, 3.99906, 0, -0.0866312, -23.4337, 0.5, -1.90734)
+transform = Transform3D(-0.0866314, 0, -3.99906, 0, 4, 0, 3.99906, 0, -0.0866314, -17.4337, -0.231284, -1.90734)
 player = NodePath("../Player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

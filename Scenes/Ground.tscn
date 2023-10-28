@@ -9,13 +9,13 @@ albedo_color = Color(0.27451, 0.356863, 0.0705882, 1)
 material = SubResource("StandardMaterial3D_088g6")
 
 [node name="Ground" type="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.843187, 0)
 collision_layer = 4
 collision_mask = 0
 metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(200, 0, 0, 0, 2, 0, 0, 0, 200, 0, 0, 0)
+transform = Transform3D(200, 0, 0, 0, 2, 0, 0, 0, 200, 0, -0.166075, 0)
 shape = SubResource("BoxShape3D_8pi3n")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

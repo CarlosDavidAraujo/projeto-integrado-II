@@ -8,7 +8,7 @@ signal healthChanged
 @onready var wolf_anim = $espirito_02/AnimationPlayer
 
 var currentSpeed = 0
-var runSpeed = 15
+var runSpeed = 20
 var dashSpeed = 50
 var isDashing = false
 var isDashRecharging = false

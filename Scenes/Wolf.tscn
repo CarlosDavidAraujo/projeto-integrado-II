@@ -6975,8 +6975,7 @@ _data = {
 "run": SubResource("Animation_cqml3")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_i8n6w"]
-size = Vector3(1.4144, 1.81635, 3.3152)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hoaeo"]
 
 [node name="Wolf" type="CharacterBody3D" groups=["mob"]]
 collision_layer = 2
@@ -8983,7 +8982,7 @@ libraries = {
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.785, 0, 0, 0, 0.785, 0, 0, 0, 0.785, 0, 0.723987, -0.554745)
-shape = SubResource("BoxShape3D_i8n6w")
+transform = Transform3D(1.17, 0, 0, 0, -5.11423e-08, -1.17, 0, 1.17, -5.11423e-08, -0.00450802, 0.834884, -0.454995)
+shape = SubResource("CapsuleShape3D_hoaeo")
 
 [connection signal="animation_finished" from="espirito_02/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

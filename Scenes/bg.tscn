@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cqxdr2yhulmfl"]
+[gd_scene load_steps=17 format=3 uid="uid://cqxdr2yhulmfl"]
 
 [ext_resource type="PackedScene" uid="uid://8hr38yv7or1i" path="res://Scenes/Ground.tscn" id="1_l1vwk"]
 [ext_resource type="PackedScene" uid="uid://bmkr6g26ix3ow" path="res://Scenes/Enviroment/base/rocks/rock_big.tscn" id="2_q6bet"]
@@ -36,8 +36,6 @@ fog_density = 0.0015
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0041
 
-[sub_resource type="BoxMesh" id="BoxMesh_vemri"]
-
 [node name="bg" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -59,10 +57,6 @@ transform = Transform3D(1, 0, 0, 0, 0.99998, 0.00635296, 0, -0.00635296, 0.99998
 
 [node name="groundsand2" parent="." instance=ExtResource("4_usvx3")]
 transform = Transform3D(0.167836, -0.00626284, 0.985795, 0, 0.99998, 0.00635296, -0.985815, -0.00106625, 0.167832, 33.2529, -0.0727577, -17.1359)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.985, 0, 0, 0, 4.985, 0, 0, 0, 4.985, 0, 4.08358, 0)
-mesh = SubResource("BoxMesh_vemri")
 
 [node name="Pedras" type="Node3D" parent="."]
 
@@ -141,25 +135,25 @@ transform = Transform3D(0.830829, 0, -0.556528, 0, 1, 0, 0.556528, 0, 0.830829, 
 [node name="Arvores" type="Node3D" parent="."]
 
 [node name="arvore_proj2" parent="Arvores" instance=ExtResource("13_dw0qk")]
-transform = Transform3D(-0.985722, 0, 2.24842, 0, 2.455, 0, -2.24842, 0, -0.985722, -26.3557, 0.979968, 22.2879)
+transform = Transform3D(-0.401516, 0, 0.915852, 0, 1, 0, -0.915852, 0, -0.401516, -26.3557, 0.979968, 22.2879)
 
 [node name="arvore_proj3" parent="Arvores" instance=ExtResource("13_dw0qk")]
-transform = Transform3D(0.912941, 0, 2.27894, 0, 2.455, 0, -2.27894, 0, 0.912941, -34.5322, 0.979968, 26.825)
+transform = Transform3D(0.37187, 0, 0.928285, 0, 1, 0, -0.928285, 0, 0.37187, -34.5322, 0.979968, 26.825)
 
 [node name="arvore_proj4" parent="Arvores" instance=ExtResource("13_dw0qk")]
-transform = Transform3D(0.861565, 0, -2.29885, 0, 2.455, 0, 2.29885, 0, 0.861565, -34.5322, 0.979968, 15.694)
+transform = Transform3D(2.455, 0, 0, 0, 2.455, 0, 0, 0, 2.455, -34.5322, 0.979968, 15.694)
 
 [node name="arvore_proj5" parent="Arvores" instance=ExtResource("13_dw0qk")]
-transform = Transform3D(-0.985722, 0, 2.24842, 0, 2.455, 0, -2.24842, 0, -0.985722, -42.9086, 0.979968, 5.79464)
+transform = Transform3D(-0.401516, 0, 0.915852, 0, 1, 0, -0.915852, 0, -0.401516, -42.9086, 0.979968, 5.79464)
 
 [node name="arvore_proj6" parent="Arvores" instance=ExtResource("13_dw0qk")]
-transform = Transform3D(0.912941, 0, 2.27894, 0, 2.455, 0, -2.27894, 0, 0.912941, -51.0851, 0.979968, 10.3317)
+transform = Transform3D(0.37187, 0, 0.928285, 0, 1, 0, -0.928285, 0, 0.37187, -51.0851, 0.979968, 10.3317)
 
 [node name="arvore_proj7" parent="Arvores" instance=ExtResource("13_dw0qk")]
-transform = Transform3D(0.861565, 0, -2.29885, 0, 2.455, 0, 2.29885, 0, 0.861565, -51.0851, 0.979968, -0.799261)
+transform = Transform3D(0.350944, 0, -0.936397, 0, 1, 0, 0.936397, 0, 0.350944, -51.0851, 0.979968, -0.799261)
 
 [node name="arvore_proj8" parent="Arvores" instance=ExtResource("13_dw0qk")]
-transform = Transform3D(-0.985722, 0, 2.24842, 0, 2.455, 0, -2.24842, 0, -0.985722, -65.418, 0.979968, 24.6543)
+transform = Transform3D(-0.401516, 0, 0.915852, 0, 1, 0, -0.915852, 0, -0.401516, -65.418, 0.979968, 24.6543)
 
 [node name="arvore_proj9" parent="Arvores" instance=ExtResource("13_dw0qk")]
 transform = Transform3D(0.912941, 0, 2.27894, 0, 2.455, 0, -2.27894, 0, 0.912941, -73.5945, 0.979968, 29.1914)
