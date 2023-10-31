@@ -14,27 +14,36 @@
 [ext_resource type="PackedScene" uid="uid://dnwbkra1eatlv" path="res://Scenes/Enviroment/base/temple_pillars/temple_pillar_bottom.tscn" id="12_ovut1"]
 [ext_resource type="PackedScene" uid="uid://dewe0slwqv23a" path="res://Assets/Modelos nossos/Cenario/arvore_proj2.gltf" id="13_dw0qk"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o7p7g"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_eg183"]
+sky_top_color = Color(0, 0.34902, 0.447059, 1)
+sky_horizon_color = Color(0.721569, 0.423529, 0, 1)
+ground_horizon_color = Color(0.384314, 0.392157, 0.407843, 1)
 
-[sub_resource type="Sky" id="Sky_bhhk3"]
-sky_material = SubResource("ProceduralSkyMaterial_o7p7g")
+[sub_resource type="Sky" id="Sky_v45cf"]
+sky_material = SubResource("ProceduralSkyMaterial_eg183")
 
 [sub_resource type="Environment" id="Environment_vctvg"]
 background_mode = 2
-sky = SubResource("Sky_bhhk3")
-sky_custom_fov = 180.0
+sky = SubResource("Sky_v45cf")
 ambient_light_color = Color(0, 0.682353, 0.643137, 1)
 ambient_light_sky_contribution = 0.93
 ambient_light_energy = 1.27
 reflected_light_source = 2
 tonemap_mode = 2
+ssr_enabled = true
+ssao_enabled = true
+ssao_intensity = 4.7
+ssil_enabled = true
+ssil_intensity = 0.33
+sdfgi_bounce_feedback = 0.29
 glow_enabled = true
-fog_light_energy = 0.49
-fog_density = 0.0015
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.0041
+glow_normalized = true
+glow_bloom = 0.09
+glow_blend_mode = 1
+fog_density = 0.001
+volumetric_fog_density = 0.0211
+volumetric_fog_detail_spread = 1.17688
+adjustment_enabled = true
 
 [node name="bg" type="Node3D"]
 
@@ -42,9 +51,9 @@ volumetric_fog_density = 0.0041
 environment = SubResource("Environment_vctvg")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.623879, 0.659128, -0.419911, 0, 0.5373, 0.843391, 0.781521, 0.526175, -0.33521, 0, 0, 0)
+transform = Transform3D(-0.921185, 0.328184, -0.209076, 0, 0.5373, 0.843391, 0.389124, 0.77692, -0.494952, 0, 0, 0)
 light_color = Color(1, 0.760784, 0.541176, 1)
-light_energy = 2.362
+light_energy = 1.067
 shadow_enabled = true
 shadow_bias = 0.0
 shadow_opacity = 0.62
@@ -61,7 +70,28 @@ transform = Transform3D(0.167836, -0.00626284, 0.985795, 0, 0.99998, 0.00635296,
 [node name="Pedras" type="Node3D" parent="."]
 
 [node name="rock_big" parent="Pedras" instance=ExtResource("2_q6bet")]
-transform = Transform3D(0.44537, 0, 0.895347, 0, 1, 0, -0.895347, 0, 0.44537, -68.4135, 8.20905, 52.1627)
+transform = Transform3D(1.68572, 0, 3.38889, 0, 3.785, 0, -3.38889, 0, 1.68572, -162.342, 39.5952, 177.511)
+
+[node name="rock_big15" parent="Pedras" instance=ExtResource("2_q6bet")]
+transform = Transform3D(3.59068, 0, 1.19718, 0, 3.785, 0, -1.19718, 0, 3.59068, -172.872, 39.5952, 142.239)
+
+[node name="rock_big26" parent="Pedras" instance=ExtResource("2_q6bet")]
+transform = Transform3D(3.6001, 0, -1.16856, 0, 3.785, 0, 1.16856, 0, 3.6001, -172.872, 39.5952, -16.6865)
+
+[node name="rock_big27" parent="Pedras" instance=ExtResource("2_q6bet")]
+transform = Transform3D(3.6001, 0, -1.16856, 0, 3.785, 0, 1.16856, 0, 3.6001, -172.872, 39.5952, -72.1384)
+
+[node name="rock_big28" parent="Pedras" instance=ExtResource("2_q6bet")]
+transform = Transform3D(3.6001, 0, -1.16856, 0, 3.785, 0, 1.16856, 0, 3.6001, -172.872, 39.5952, -106.376)
+
+[node name="rock_big29" parent="Pedras" instance=ExtResource("2_q6bet")]
+transform = Transform3D(2.13249, 0.575673, 3.07364, 0.193153, -3.73746, 0.565991, 3.12112, -0.162031, -2.13508, -172.872, 20.5794, -161.828)
+
+[node name="rock_big16" parent="Pedras" instance=ExtResource("2_q6bet")]
+transform = Transform3D(3.77765, 0, -0.23575, 0, 3.785, 0, 0.23575, 0, 3.77765, -182.485, 39.2238, 94.0341)
+
+[node name="rock_big25" parent="Pedras" instance=ExtResource("2_q6bet")]
+transform = Transform3D(3.77765, 0, -0.23575, 0, 2.79978, 0, 0.23575, 0, 3.77765, -182.502, 24.8755, 35.9823)
 
 [node name="rock_big3" parent="Pedras" instance=ExtResource("2_q6bet")]
 transform = Transform3D(0.85871, 0, -0.512463, 0, 1, 0, 0.512463, 0, 0.85871, -17.1923, 8.20905, -67.6305)
@@ -109,7 +139,7 @@ transform = Transform3D(0.885283, 0.0172823, 0.464732, -0.013471, -0.997937, 0.0
 transform = Transform3D(0.103105, 0, 0.994671, 0, 1, 0, -0.994671, 0, 0.103105, 22.8175, 4.99027, 56.4922)
 
 [node name="rock_big22" parent="Pedras" instance=ExtResource("2_q6bet")]
-transform = Transform3D(0.309085, -0.0638593, -0.948889, -0.013471, -0.997937, 0.0627723, -0.95094, -0.00661953, -0.309307, 8.14939, 4.67604, 55.8808)
+transform = Transform3D(0.0249145, -0.0630935, -0.997697, -0.013471, -0.997937, 0.0627723, -0.9996, 0.011876, -0.0257125, 8.14939, 4.67604, 55.8808)
 
 [node name="rock_big23" parent="Pedras" instance=ExtResource("2_q6bet")]
 transform = Transform3D(-0.464023, 0, 0.885823, 0, 1, 0, -0.885823, 0, -0.464023, 37.3166, 8.20905, 55.4908)
