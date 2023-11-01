@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://qq1mn71fbpoa"]
+[gd_scene load_steps=9 format=3 uid="uid://qq1mn71fbpoa"]
 
 [ext_resource type="PackedScene" uid="uid://cmp4lebu2ekn1" path="res://Scenes/Player.tscn" id="1_hb7re"]
 [ext_resource type="PackedScene" uid="uid://8hr38yv7or1i" path="res://Scenes/Ground.tscn" id="2_junw0"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cqxdr2yhulmfl" path="res://Scenes/bg.tscn" id="5_xttaf"]
 [ext_resource type="PackedScene" uid="uid://dewe0slwqv23a" path="res://Assets/Modelos nossos/Cenario/arvore_proj2.gltf" id="6_nrypp"]
 [ext_resource type="PackedScene" uid="uid://srxxlcavg3om" path="res://Assets/Modelos nossos/Espirito/modelo_fiel_espirito_01.gltf" id="7_xhrss"]
+[ext_resource type="PackedScene" uid="uid://d2p8ibea8a1na" path="res://Assets/Modelos nossos/Personagem/personagem_04.gltf" id="8_fqfgw"]
 
 [node name="Main" type="Node"]
 
@@ -43,3 +44,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.986, -0.092032, -33.3535)
 
 [node name="modelo_fiel_espirito_01" parent="." instance=ExtResource("7_xhrss")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7, 0, -16)
+
+[node name="personagem_04" parent="." instance=ExtResource("8_fqfgw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 4)
