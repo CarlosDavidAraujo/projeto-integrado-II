@@ -43,3 +43,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.986, -0.092032, -33.3535)
 
 [node name="modelo_fiel_espirito_01" parent="." instance=ExtResource("7_xhrss")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7, 0, -16)
+visible = false

@@ -49,7 +49,6 @@ func dash():
 		wolf_anim.play("dash")
 		
 func run():
-	print(isDashing, playerDistance)
 	if not isDashing and playerDistance > 12.0:
 		velocity = playerPosition * runSpeed
 		wolf_anim.speed_scale = 1.3
