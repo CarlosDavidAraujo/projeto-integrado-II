@@ -1,6 +1,7 @@
 extends State
 
 @export var player: Player
+@onready var animation = $"../../Pivot/AnimationPlayer"
 var target_velocity = Vector3.ZERO
 
 func physics_update(delta: float):
@@ -18,18 +19,17 @@ func physics_update(delta: float):
 	#Controle de direção do personagem
 	if direction != Vector3.ZERO: #se estiver se movendo
 		direction = direction.normalized()
-		$"../../Pivot".look_at(player.global_position + direction, Vector3.UP)
 	else: #se nao estiver se movendo muda para o estado idle
 		Transitioned.emit(self, "idle")
 	
-	# quando esta atacando nao excuta a animacao de corrida e desacelera
+	# quando esta atacando desacelera e nao excuta a animacao de corrida
 	if  player.isAttacking:	
 		player.speed = 10
 	else:
 		player.speed = 30
-		player.animation_player.play("Aanim Run cycle") 
-		
-		
+		animation.play("Aanim Run cycle")
+		player.look_at_move_direction()
+				
 	#Movimentando o personagem
 	target_velocity.x = direction.x * player.speed
 	target_velocity.z = direction.z * player.speed
@@ -37,5 +37,5 @@ func physics_update(delta: float):
 
 #muda para estado de dash quando aciona a tecla de dash
 func state_input(event: InputEvent):
-	if event.is_action_pressed("dash")  and player.canDash:
+	if event.is_action_pressed("dash") and player.canDash:
 		Transitioned.emit(self, "dash")
