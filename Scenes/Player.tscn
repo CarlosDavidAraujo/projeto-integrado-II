@@ -25532,7 +25532,7 @@ mesh = SubResource("ArrayMesh_66sl3")
 skin = SubResource("Skin_feaid")
 
 [node name="WeaponAtachment" type="BoneAttachment3D" parent="Pivot/rig/Skeleton3D"]
-transform = Transform3D(-0.560121, 0.157312, 0.813337, 0.506907, -0.711456, 0.486698, 0.655217, 0.684897, 0.318759, 0.420478, 0.792282, 0.315915)
+transform = Transform3D(-0.560121, 0.157312, 0.813337, 0.506907, -0.711456, 0.486698, 0.655217, 0.684896, 0.318759, 0.420478, 0.792282, 0.315915)
 bone_name = "Bone"
 bone_idx = 410
 
