@@ -1066,7 +1066,7 @@ script = ExtResource("5_ekmag")
 player = NodePath("../../Player")
 
 [node name="bg" parent="." instance=ExtResource("5_xttaf")]
-transform = Transform3D(0.563108, 0, -0.826384, 0, 1, 0, 0.826384, 0, 0.563108, 17, -1.072, -17)
+transform = Transform3D(2.25243, 0, -3.30553, 0, 4, 0, 3.30553, 0, 2.25243, 17, -1.072, -17)
 
 [node name="modelo_fiel_espirito_01" type="Node3D" parent="."]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7, 0, -16)
