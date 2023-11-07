@@ -1,10 +1,19 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqxdr2yhulmfl"]
+[gd_scene load_steps=20 format=3 uid="uid://cqxdr2yhulmfl"]
 
 [ext_resource type="PackedScene" uid="uid://8hr38yv7or1i" path="res://Scenes/Enviroment/Ground.tscn" id="1_l1vwk"]
-[ext_resource type="PackedScene" uid="uid://bcydxagauvc7w" path="res://Scenes/Enviroment/arvore.tscn" id="2_uvwyx"]
+[ext_resource type="PackedScene" uid="uid://cea2pne3vt68y" path="res://Scenes/elementos_lado.tscn" id="2_dlmj5"]
+[ext_resource type="PackedScene" uid="uid://dvutajdsd780m" path="res://Scenes/Enviroment/externo/base/temple_pillars/temple_door.tscn" id="3_7s1fw"]
 [ext_resource type="PackedScene" uid="uid://bmkr6g26ix3ow" path="res://Scenes/Enviroment/externo/base/rocks/rock_big.tscn" id="3_jrtpm"]
-[ext_resource type="PackedScene" uid="uid://jdteth8nguhk" path="res://Scenes/Enviroment/luz.tscn" id="4_jmm1a"]
-[ext_resource type="PackedScene" uid="uid://bvawamfxhcrbe" path="res://Scenes/Enviroment/arbusto.tscn" id="5_j3ppy"]
+[ext_resource type="PackedScene" uid="uid://7ffcufm7droq" path="res://Scenes/Enviroment/externo/base/stairs/temple_stairs_1.tscn" id="5_lpifj"]
+[ext_resource type="PackedScene" uid="uid://dlqgqkvrdxx05" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_1.tscn" id="6_blf05"]
+[ext_resource type="PackedScene" uid="uid://b8hwrwq5s346g" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_2.tscn" id="7_xcyn5"]
+[ext_resource type="PackedScene" uid="uid://efdytypf3lx8" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_3.tscn" id="8_3hvgn"]
+[ext_resource type="PackedScene" uid="uid://dc6c0goa8eu1s" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_5.tscn" id="10_r12mc"]
+[ext_resource type="PackedScene" uid="uid://mw3w7v0siqev" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_6.tscn" id="11_rfdx1"]
+[ext_resource type="PackedScene" uid="uid://mqvduda8rw6q" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_7.tscn" id="12_364hr"]
+[ext_resource type="PackedScene" uid="uid://dc2kquulamku3" path="res://Scenes/Enviroment/externo/base/temple_pillars/templearc_bottom.tscn" id="12_rp2b3"]
+[ext_resource type="PackedScene" uid="uid://bqn01vvlql12f" path="res://Scenes/Enviroment/externo/base/temple_pillars/templearc_top.tscn" id="13_ik37j"]
+[ext_resource type="PackedScene" uid="uid://oxp303ddd6nh" path="res://Scenes/Enviroment/externo/base/temple_pillars/templearc_side_1.tscn" id="14_3536b"]
 
 [sub_resource type="Gradient" id="Gradient_jfiru"]
 offsets = PackedFloat32Array(0, 0.0518519, 1)
@@ -53,7 +62,7 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 environment = SubResource("Environment_vctvg")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.0715536, 0.437893, 0.896175, 0.368129, -0.846639, 0.384295, 0.927017, 0.302411, -0.221781, 0, 0, 0)
+transform = Transform3D(-0.0302887, 0.0915293, 0.230662, 0.0920323, -0.21166, 0.0960739, 0.230462, 0.0965533, -0.00805095, 0, 0, 0)
 shadow_enabled = true
 shadow_bias = 0.0
 shadow_opacity = 0.62
@@ -63,554 +72,76 @@ directional_shadow_blend_splits = true
 directional_shadow_max_distance = 2901.3
 
 [node name="Ground" parent="." instance=ExtResource("1_l1vwk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.303999)
 
-[node name="Elementos" type="Node3D" parent="."]
+[node name="elementos_lado" parent="." instance=ExtResource("2_dlmj5")]
+transform = Transform3D(0.990505, 0, 0.137479, 0, 1, 0, -0.137479, 0, 0.990505, 7.61294, -0.0762934, -6.87652)
 
-[node name="arvores_todas" type="Node3D" parent="Elementos"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.5537, 0, -29.9667)
+[node name="elementos_lado2" parent="." instance=ExtResource("2_dlmj5")]
+transform = Transform3D(-0.989543, 0, -0.144235, 0, 1, 0, 0.144235, 0, -0.989543, -7.27876, -0.0762896, -2.34838)
 
-[node name="grupo_arvores" type="Node3D" parent="Elementos/arvores_todas"]
+[node name="Saida" type="Node3D" parent="."]
+transform = Transform3D(-0.842358, 0, -0.538918, 0, 1, 0, 0.538918, 0, -0.842358, 36.9897, -3.8147e-06, 1.00043)
 
-[node name="arvores_01" type="Node3D" parent="Elementos/arvores_todas/grupo_arvores"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.58, 0, -3.88391)
+[node name="temple_door" parent="Saida" instance=ExtResource("3_7s1fw")]
+transform = Transform3D(0.224042, 0, 0.331369, 0, 0.4, 0, -0.331369, 0, 0.224042, -1.13658, 5.64631, -0.17034)
 
-[node name="arvore_01" parent="Elementos/arvores_todas/grupo_arvores/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
+[node name="rock_big" parent="Saida" instance=ExtResource("3_jrtpm")]
+transform = Transform3D(-0.842358, 0.213892, 0.494654, 0, 0.917865, -0.396892, -0.538918, -0.334325, -0.773172, -10.3715, 5.04538, 2.43389)
 
-[node name="arvore_02" parent="Elementos/arvores_todas/grupo_arvores/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
+[node name="rock_big2" parent="Saida" instance=ExtResource("3_jrtpm")]
+transform = Transform3D(-0.842358, -0.331405, 0.424974, 0, 0.788569, 0.614946, -0.538918, 0.518005, -0.664258, -1.43162, 8.84162, -7.64911)
 
-[node name="arvore_03" parent="Elementos/arvores_todas/grupo_arvores/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
+[node name="temple_stairs_1" parent="Saida" instance=ExtResource("5_lpifj")]
+transform = Transform3D(0.206693, 0, 0.336605, 0, 0.395, 0, -0.336605, 0, 0.206693, -0.123709, 1.56998, 0.531857)
 
-[node name="arvores_02" type="Node3D" parent="Elementos/arvores_todas/grupo_arvores"]
-transform = Transform3D(0.632827, 0, -0.774293, 0, 1, 0, 0.774293, 0, 0.632827, 3.95738, 0, -2.16139)
+[node name="temple_tiles_detail_1" parent="Saida" instance=ExtResource("6_blf05")]
+transform = Transform3D(-0.842358, 0, 0.538918, 0, 1, 0, -0.538918, 0, -0.842358, 1.6716, 0.819976, 4.98489)
 
-[node name="arvore_01" parent="Elementos/arvores_todas/grupo_arvores/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
+[node name="temple_tiles_detail_9" parent="Saida" instance=ExtResource("6_blf05")]
+transform = Transform3D(0.83685, 0, -0.547432, 0, 1, 0, 0.547432, 0, 0.83685, 4.96471, 0.819976, 0.14753)
 
-[node name="arvore_02" parent="Elementos/arvores_todas/grupo_arvores/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
+[node name="temple_tiles_detail_2" parent="Saida" instance=ExtResource("7_xcyn5")]
+transform = Transform3D(-0.851846, 0, 0.523793, 0, 1, 0, -0.523793, 0, -0.851846, -3.31267, 0.819976, 3.66009)
 
-[node name="arvore_03" parent="Elementos/arvores_todas/grupo_arvores/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
+[node name="temple_tiles_detail_4" parent="Saida" instance=ExtResource("7_xcyn5")]
+transform = Transform3D(0.839355, 0, -0.543585, 0, 1, 0, 0.543585, 0, 0.839355, 1.65385, 0.819977, -3.83698)
 
-[node name="arvores_03" type="Node3D" parent="Elementos/arvores_todas/grupo_arvores"]
-transform = Transform3D(-0.307689, 0, -0.951487, 0, 1, 0, 0.951487, 0, -0.307689, 14.8486, 0, -2.16139)
+[node name="temple_tiles_detail_10" parent="Saida" instance=ExtResource("7_xcyn5")]
+transform = Transform3D(0.839355, 0, -0.543585, 0, 1, 0, 0.543585, 0, 0.839355, 9.09674, 0.819977, -3.13964)
 
-[node name="arvore_01" parent="Elementos/arvores_todas/grupo_arvores/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
+[node name="temple_tiles_detail_3" parent="Saida" instance=ExtResource("8_3hvgn")]
+transform = Transform3D(-0.842358, 0, 0.538918, 0, 1, 0, -0.538918, 0, -0.842358, -5.0987, 0.819976, 6.41838)
 
-[node name="arvore_02" parent="Elementos/arvores_todas/grupo_arvores/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
+[node name="temple_tiles_detail_8" parent="Saida" instance=ExtResource("8_3hvgn")]
+transform = Transform3D(-0.842358, 0, 0.538918, 0, 1, 0, -0.538918, 0, -0.842358, 0.236326, 0.819976, 9.83158)
 
-[node name="arvore_03" parent="Elementos/arvores_todas/grupo_arvores/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
+[node name="temple_tiles_detail_5" parent="Saida" instance=ExtResource("10_r12mc")]
+transform = Transform3D(-0.842358, 0, 0.538918, 0, 1, 0, -0.538918, 0, -0.842358, 3.53662, 0.819976, -6.83371)
 
-[node name="grupo_arvores2" type="Node3D" parent="Elementos/arvores_todas"]
-transform = Transform3D(0.856322, 0, 0.516444, 0, 1, 0, -0.516444, 0, 0.856322, -34.852, 0, 11.1042)
+[node name="temple_tiles_detail_6" parent="Saida" instance=ExtResource("11_rfdx1")]
+transform = Transform3D(-0.842358, 0, 0.538918, 0, 1, 0, -0.538918, 0, -0.842358, -2.64058, 0.819976, 7.95617)
 
-[node name="arvores_01" type="Node3D" parent="Elementos/arvores_todas/grupo_arvores2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.58, 0, -3.88391)
+[node name="temple_tiles_detail_7" parent="Saida" instance=ExtResource("12_364hr")]
+transform = Transform3D(-0.842358, 0, 0.538918, 0, 1, 0, -0.538918, 0, -0.842358, 6.17361, 0.819976, -4.94567)
 
-[node name="arvore_01" parent="Elementos/arvores_todas/grupo_arvores2/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
+[node name="templearc_bottom" parent="Saida" instance=ExtResource("12_rp2b3")]
+transform = Transform3D(-0.842358, 0, 0.538918, 0, 1, 0, -0.538918, 0, -0.842358, -3.83797, 1.65179, 3.37296)
 
-[node name="arvore_02" parent="Elementos/arvores_todas/grupo_arvores2/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
+[node name="templearc_bottom2" parent="Saida" instance=ExtResource("12_rp2b3")]
+transform = Transform3D(-0.842358, 0, 0.538918, 0, 1, 0, -0.538918, 0, -0.842358, -5.51496, 1.65179, 5.99418)
 
-[node name="arvore_03" parent="Elementos/arvores_todas/grupo_arvores2/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
+[node name="templearc_bottom3" parent="Saida" instance=ExtResource("12_rp2b3")]
+transform = Transform3D(-0.842358, 0, 0.538918, 0, 1, 0, -0.538918, 0, -0.842358, 0.856863, 1.65179, -3.96535)
 
-[node name="arvores_02" type="Node3D" parent="Elementos/arvores_todas/grupo_arvores2"]
-transform = Transform3D(0.632827, 0, -0.774293, 0, 1, 0, 0.774293, 0, 0.632827, 3.95738, 0, -2.16139)
+[node name="templearc_bottom4" parent="Saida" instance=ExtResource("12_rp2b3")]
+transform = Transform3D(-0.842358, 0, 0.538918, 0, 1, 0, -0.538918, 0, -0.842358, 2.57907, 1.65179, -6.65725)
 
-[node name="arvore_01" parent="Elementos/arvores_todas/grupo_arvores2/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
+[node name="templearc_top" parent="Saida" instance=ExtResource("13_ik37j")]
+transform = Transform3D(0.218622, 0, 0.334969, 0, 0.4, 0, -0.334969, 0, 0.218622, -1.29892, 9.69623, -0.3018)
 
-[node name="arvore_02" parent="Elementos/arvores_todas/grupo_arvores2/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
+[node name="templearc_side1" parent="Saida" instance=ExtResource("14_3536b")]
+transform = Transform3D(-0.336943, 0, 0.215567, 0, 0.4, 0, -0.215567, 0, -0.336943, -3.26064, 5.12594, 2.3665)
 
-[node name="arvore_03" parent="Elementos/arvores_todas/grupo_arvores2/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="arvores_03" type="Node3D" parent="Elementos/arvores_todas/grupo_arvores2"]
-transform = Transform3D(-0.307689, 0, -0.951487, 0, 1, 0, 0.951487, 0, -0.307689, 14.8486, 0, -2.16139)
-
-[node name="arvore_01" parent="Elementos/arvores_todas/grupo_arvores2/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
-
-[node name="arvore_02" parent="Elementos/arvores_todas/grupo_arvores2/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
-
-[node name="arvore_03" parent="Elementos/arvores_todas/grupo_arvores2/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="grupo_arvores3" type="Node3D" parent="Elementos/arvores_todas"]
-transform = Transform3D(0.78226, 0, -0.622952, 0, 1, 0, 0.622952, 0, 0.78226, 34.6496, 0, 9.5298)
-
-[node name="arvores_01" type="Node3D" parent="Elementos/arvores_todas/grupo_arvores3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.58, 0, -3.88391)
-
-[node name="arvore_01" parent="Elementos/arvores_todas/grupo_arvores3/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
-
-[node name="arvore_02" parent="Elementos/arvores_todas/grupo_arvores3/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
-
-[node name="arvore_03" parent="Elementos/arvores_todas/grupo_arvores3/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="arvores_02" type="Node3D" parent="Elementos/arvores_todas/grupo_arvores3"]
-transform = Transform3D(0.632827, 0, -0.774293, 0, 1, 0, 0.774293, 0, 0.632827, 3.95738, 0, -2.16139)
-
-[node name="arvore_01" parent="Elementos/arvores_todas/grupo_arvores3/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
-
-[node name="arvore_02" parent="Elementos/arvores_todas/grupo_arvores3/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
-
-[node name="arvore_03" parent="Elementos/arvores_todas/grupo_arvores3/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="arvores_03" type="Node3D" parent="Elementos/arvores_todas/grupo_arvores3"]
-transform = Transform3D(-0.307689, 0, -0.951487, 0, 1, 0, 0.951487, 0, -0.307689, 14.8486, 0, -2.16139)
-
-[node name="arvore_01" parent="Elementos/arvores_todas/grupo_arvores3/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
-
-[node name="arvore_02" parent="Elementos/arvores_todas/grupo_arvores3/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
-
-[node name="arvore_03" parent="Elementos/arvores_todas/grupo_arvores3/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="pedras_todas" type="Node3D" parent="Elementos"]
-
-[node name="pedras" type="Node3D" parent="Elementos/pedras_todas"]
-transform = Transform3D(0.99884, 0, 0.0481525, 0, 1, 0, -0.0481525, 0, 0.99884, -4.1891, 0, -34.9867)
-
-[node name="pedra" parent="Elementos/pedras_todas/pedras" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.67898, 0, -0.734157, 0, 1, 0, 0.734157, 0, 0.67898, -15.6813, 1, -5.69189)
-
-[node name="pedra2" parent="Elementos/pedras_todas/pedras" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.19208e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos/pedras_todas/pedras" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, -1.49697, -4.03679)
-
-[node name="pedras2" type="Node3D" parent="Elementos/pedras_todas"]
-transform = Transform3D(0.581669, 0, -0.813426, 0, 1, 0, 0.813426, 0, 0.581669, 18.112, 0, -23.7188)
-
-[node name="pedra" parent="Elementos/pedras_todas/pedras2" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.67898, 0, -0.734157, 0, 1, 0, 0.734157, 0, 0.67898, -15.6813, 1, -5.69189)
-
-[node name="pedra2" parent="Elementos/pedras_todas/pedras2" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.49012e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos/pedras_todas/pedras2" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, -1.49697, -4.03679)
-
-[node name="pedras3" type="Node3D" parent="Elementos/pedras_todas"]
-transform = Transform3D(0.647854, 0, 0.761765, 0, 1, 0, -0.761765, 0, 0.647854, -31.0336, 0, -28.2014)
-
-[node name="pedra" parent="Elementos/pedras_todas/pedras3" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.364129, 0, -0.931348, 0, 1, 0, 0.931348, 0, 0.364129, -15.6813, 1, -5.69188)
-
-[node name="pedra2" parent="Elementos/pedras_todas/pedras3" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.19208e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos/pedras_todas/pedras3" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, -1.49697, -4.03679)
-
-[node name="pedras_menores_4" type="Node3D" parent="Elementos/pedras_todas"]
-transform = Transform3D(0.257439, 0, 0.110115, 0, 0.28, 0, -0.110115, 0, 0.257439, -31.8196, -1.43303, -17.4438)
-
-[node name="pedra" parent="Elementos/pedras_todas/pedras_menores_4" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.364129, 0, -0.931348, 0, 1, 0, 0.931348, 0, 0.364129, -15.6813, 1, -5.69188)
-
-[node name="pedra2" parent="Elementos/pedras_todas/pedras_menores_4" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.19208e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos/pedras_todas/pedras_menores_4" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, 0.691473, -4.03679)
-
-[node name="pedras_menores_5" type="Node3D" parent="Elementos/pedras_todas"]
-transform = Transform3D(0.277749, 0, 0.0354326, 0, 0.28, 0, -0.0354326, 0, 0.277749, -24.7677, -1.3746, -16.8033)
-
-[node name="pedra" parent="Elementos/pedras_todas/pedras_menores_5" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.573891, 0, -0.818932, 0, 1, 0, 0.818932, 0, 0.573891, -6.48283, 1, -18.1936)
-
-[node name="pedra2" parent="Elementos/pedras_todas/pedras_menores_5" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.236295, -0.00515543, 0.971668, 6.32486e-10, -0.999986, -0.00530568, 0.971681, 0.00125371, -0.236292, 4.0351, 1, -24.3969)
-
-[node name="pedra3" parent="Elementos/pedras_todas/pedras_menores_5" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.109925, 0, -0.993939, 0, 1, 0, 0.993939, 0, -0.109925, 18.5522, 0.691472, -22.5783)
-
-[node name="pedras_menores_6" type="Node3D" parent="Elementos/pedras_todas"]
-transform = Transform3D(0.277749, 0, 0.0354326, 0, 0.28, 0, -0.0354326, 0, 0.277749, -12.0772, -1.3746, -23.3781)
-
-[node name="pedra" parent="Elementos/pedras_todas/pedras_menores_6" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.265539, 0, -0.9641, 0, 1, 0, 0.9641, 0, 0.265539, -15.6813, 1, -5.69189)
-
-[node name="pedra2" parent="Elementos/pedras_todas/pedras_menores_6" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.19208e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos/pedras_todas/pedras_menores_6" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, 0.691472, -4.03679)
-
-[node name="pedras_menores_7" type="Node3D" parent="Elementos/pedras_todas"]
-transform = Transform3D(0.262543, 0, -0.0973208, 0, 0.28, 0, 0.0973208, 0, 0.262543, -2.08833, -1.3746, -21.4417)
-
-[node name="pedra" parent="Elementos/pedras_todas/pedras_menores_7" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.265539, 0, -0.9641, 0, 1, 0, 0.9641, 0, 0.265539, -15.6813, 1, -5.69189)
-
-[node name="pedra2" parent="Elementos/pedras_todas/pedras_menores_7" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.19208e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos/pedras_todas/pedras_menores_7" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, 0.691472, -4.03679)
-
-[node name="pedras_menores_8" type="Node3D" parent="Elementos/pedras_todas"]
-transform = Transform3D(0.262543, 0, -0.0973208, 0, 0.28, 0, 0.0973208, 0, 0.262543, 8.02582, -1.3746, -16.8342)
-
-[node name="pedra" parent="Elementos/pedras_todas/pedras_menores_8" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.265539, 0, -0.9641, 0, 1, 0, 0.9641, 0, 0.265539, -15.6813, 1, -5.69189)
-
-[node name="pedra2" parent="Elementos/pedras_todas/pedras_menores_8" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.19208e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos/pedras_todas/pedras_menores_8" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, 0.691472, -4.03679)
-
-[node name="luzes" type="Node3D" parent="Elementos"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.75, 0)
-
-[node name="Luz" parent="Elementos/luzes" instance=ExtResource("4_jmm1a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.25, 4.66968, -33)
-
-[node name="Luz2" parent="Elementos/luzes" instance=ExtResource("4_jmm1a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.07591, 1.95397, -34.25)
-
-[node name="Luz3" parent="Elementos/luzes" instance=ExtResource("4_jmm1a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.952685, 1.95397, -34.25)
-
-[node name="Luz4" parent="Elementos/luzes" instance=ExtResource("4_jmm1a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.093, 1.95397, -31.8332)
-
-[node name="Luz5" parent="Elementos/luzes" instance=ExtResource("4_jmm1a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2712, 1.95397, -30.3566)
-
-[node name="Luz6" parent="Elementos/luzes" instance=ExtResource("4_jmm1a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.5121, 2.87812, -30.3566)
-
-[node name="arbustos_todos" type="Node3D" parent="Elementos"]
-
-[node name="arbusto_medio" parent="Elementos/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.413872, 0, -0.684624, 0, 0.8, 0, 0.684624, 0, 0.413872, -1.94985, 0.819973, -29.9599)
-
-[node name="arbusto_medio2" parent="Elementos/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.409586, 0, 0.687196, 0, 0.8, 0, -0.687196, 0, 0.409586, -14.3228, 0.819973, -30.7775)
-
-[node name="arbusto_medio6" parent="Elementos/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.634138, 0, 0.487718, 0, 0.8, 0, -0.487718, 0, 0.634138, -19.5499, 0.819973, -26.3782)
-
-[node name="arbusto_medio7" parent="Elementos/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -23.1762, 0.819973, -31.225)
-
-[node name="arbusto_medio8" parent="Elementos/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -30.9959, 0.819973, -23.8915)
-
-[node name="arbusto_medio9" parent="Elementos/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -34.7359, 0.819973, -23.5866)
-
-[node name="arbusto_medio5" parent="Elementos/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.282362, 0, -0.748513, 0, 0.8, 0, 0.748513, 0, 0.282362, -17.696, 0.819974, -32.5037)
-
-[node name="arbusto_grande" parent="Elementos/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.357726, 0, -0.89086, 0, 0.96, 0, 0.89086, 0, 0.357726, -0.0228968, 0.819972, -21.6569)
-
-[node name="arbusto_grande2" parent="Elementos/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.315063, 0, -0.906827, 0, 0.96, 0, 0.906827, 0, 0.315063, -15.0047, 0.819973, -23.7245)
-
-[node name="arbusto_pequeno" parent="Elementos/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.664495, 0, -0.0857133, 0, 0.67, 0, 0.0857133, 0, 0.664495, -1.44005, 0.819973, -22.3853)
-
-[node name="arbusto_pequeno2" parent="Elementos/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.664495, 0, -0.0857133, 0, 0.67, 0, 0.0857133, 0, 0.664495, -25.2464, 0.819973, -21.6302)
-
-[node name="Elementos2" type="Node3D" parent="."]
-transform = Transform3D(-0.862487, 0, -0.506079, 0, 1, 0, 0.506079, 0, -0.862487, -22.1935, 0.221619, 2.76288)
-
-[node name="arvores_todas" type="Node3D" parent="Elementos2"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.5537, 0, -29.9667)
-
-[node name="grupo_arvores" type="Node3D" parent="Elementos2/arvores_todas"]
-
-[node name="arvores_01" type="Node3D" parent="Elementos2/arvores_todas/grupo_arvores"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.58, 0, -3.88391)
-
-[node name="arvore_01" parent="Elementos2/arvores_todas/grupo_arvores/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
-
-[node name="arvore_02" parent="Elementos2/arvores_todas/grupo_arvores/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
-
-[node name="arvore_03" parent="Elementos2/arvores_todas/grupo_arvores/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="arvores_02" type="Node3D" parent="Elementos2/arvores_todas/grupo_arvores"]
-transform = Transform3D(0.632827, 0, -0.774293, 0, 1, 0, 0.774293, 0, 0.632827, 3.95738, 0, -2.16139)
-
-[node name="arvore_01" parent="Elementos2/arvores_todas/grupo_arvores/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
-
-[node name="arvore_02" parent="Elementos2/arvores_todas/grupo_arvores/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
-
-[node name="arvore_03" parent="Elementos2/arvores_todas/grupo_arvores/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="arvores_03" type="Node3D" parent="Elementos2/arvores_todas/grupo_arvores"]
-transform = Transform3D(-0.307689, 0, -0.951487, 0, 1, 0, 0.951487, 0, -0.307689, 14.8486, 0, -2.16139)
-
-[node name="arvore_01" parent="Elementos2/arvores_todas/grupo_arvores/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
-
-[node name="arvore_02" parent="Elementos2/arvores_todas/grupo_arvores/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
-
-[node name="arvore_03" parent="Elementos2/arvores_todas/grupo_arvores/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="grupo_arvores2" type="Node3D" parent="Elementos2/arvores_todas"]
-transform = Transform3D(0.856322, 0, 0.516444, 0, 1, 0, -0.516444, 0, 0.856322, -34.852, 0, 11.1042)
-
-[node name="arvores_01" type="Node3D" parent="Elementos2/arvores_todas/grupo_arvores2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.58, 0, -3.88391)
-
-[node name="arvore_01" parent="Elementos2/arvores_todas/grupo_arvores2/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
-
-[node name="arvore_02" parent="Elementos2/arvores_todas/grupo_arvores2/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
-
-[node name="arvore_03" parent="Elementos2/arvores_todas/grupo_arvores2/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="arvores_02" type="Node3D" parent="Elementos2/arvores_todas/grupo_arvores2"]
-transform = Transform3D(0.632827, 0, -0.774293, 0, 1, 0, 0.774293, 0, 0.632827, 3.95738, 0, -2.16139)
-
-[node name="arvore_01" parent="Elementos2/arvores_todas/grupo_arvores2/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
-
-[node name="arvore_02" parent="Elementos2/arvores_todas/grupo_arvores2/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
-
-[node name="arvore_03" parent="Elementos2/arvores_todas/grupo_arvores2/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="arvores_03" type="Node3D" parent="Elementos2/arvores_todas/grupo_arvores2"]
-transform = Transform3D(-0.307689, 0, -0.951487, 0, 1, 0, 0.951487, 0, -0.307689, 14.8486, 0, -2.16139)
-
-[node name="arvore_01" parent="Elementos2/arvores_todas/grupo_arvores2/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
-
-[node name="arvore_02" parent="Elementos2/arvores_todas/grupo_arvores2/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
-
-[node name="arvore_03" parent="Elementos2/arvores_todas/grupo_arvores2/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="grupo_arvores3" type="Node3D" parent="Elementos2/arvores_todas"]
-transform = Transform3D(0.78226, 0, -0.622952, 0, 1, 0, 0.622952, 0, 0.78226, 34.6496, 0, 9.5298)
-
-[node name="arvores_01" type="Node3D" parent="Elementos2/arvores_todas/grupo_arvores3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.58, 0, -3.88391)
-
-[node name="arvore_01" parent="Elementos2/arvores_todas/grupo_arvores3/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
-
-[node name="arvore_02" parent="Elementos2/arvores_todas/grupo_arvores3/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
-
-[node name="arvore_03" parent="Elementos2/arvores_todas/grupo_arvores3/arvores_01" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="arvores_02" type="Node3D" parent="Elementos2/arvores_todas/grupo_arvores3"]
-transform = Transform3D(0.632827, 0, -0.774293, 0, 1, 0, 0.774293, 0, 0.632827, 3.95738, 0, -2.16139)
-
-[node name="arvore_01" parent="Elementos2/arvores_todas/grupo_arvores3/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
-
-[node name="arvore_02" parent="Elementos2/arvores_todas/grupo_arvores3/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
-
-[node name="arvore_03" parent="Elementos2/arvores_todas/grupo_arvores3/arvores_02" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="arvores_03" type="Node3D" parent="Elementos2/arvores_todas/grupo_arvores3"]
-transform = Transform3D(-0.307689, 0, -0.951487, 0, 1, 0, 0.951487, 0, -0.307689, 14.8486, 0, -2.16139)
-
-[node name="arvore_01" parent="Elementos2/arvores_todas/grupo_arvores3/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47439, 0.813893, 1.95969)
-
-[node name="arvore_02" parent="Elementos2/arvores_todas/grupo_arvores3/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.757941, 0, -0.652323, 0, 1, 0, 0.652323, 0, 0.757941, 1.14935, 0.813893, 1.95969)
-
-[node name="arvore_03" parent="Elementos2/arvores_todas/grupo_arvores3/arvores_03" instance=ExtResource("2_uvwyx")]
-transform = Transform3D(0.886962, 0, 0.461842, 0, 1, 0, -0.461842, 0, 0.886962, -1.80388, 0.813893, -4.18213)
-
-[node name="pedras_todas" type="Node3D" parent="Elementos2"]
-
-[node name="pedras" type="Node3D" parent="Elementos2/pedras_todas"]
-transform = Transform3D(0.99884, 0, 0.0481525, 0, 1, 0, -0.0481525, 0, 0.99884, -4.1891, 0, -34.9867)
-
-[node name="pedra" parent="Elementos2/pedras_todas/pedras" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.67898, 0, -0.734157, 0, 1, 0, 0.734157, 0, 0.67898, -15.6813, 1, -5.69189)
-
-[node name="pedra2" parent="Elementos2/pedras_todas/pedras" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.19208e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos2/pedras_todas/pedras" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, -1.49697, -4.03679)
-
-[node name="pedras2" type="Node3D" parent="Elementos2/pedras_todas"]
-transform = Transform3D(0.581669, 0, -0.813426, 0, 1, 0, 0.813426, 0, 0.581669, 18.112, 0, -23.7188)
-
-[node name="pedra" parent="Elementos2/pedras_todas/pedras2" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.67898, 0, -0.734157, 0, 1, 0, 0.734157, 0, 0.67898, -15.6813, 1, -5.69189)
-
-[node name="pedra2" parent="Elementos2/pedras_todas/pedras2" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.49012e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos2/pedras_todas/pedras2" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, -1.49697, -4.03679)
-
-[node name="pedras3" type="Node3D" parent="Elementos2/pedras_todas"]
-transform = Transform3D(0.647854, 0, 0.761765, 0, 1, 0, -0.761765, 0, 0.647854, -31.0336, 0, -28.2014)
-
-[node name="pedra" parent="Elementos2/pedras_todas/pedras3" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.0158644, 0, -0.999874, 0, 1, 0, 0.999874, 0, 0.0158644, -18.1161, 1, -5.26357)
-
-[node name="pedra2" parent="Elementos2/pedras_todas/pedras3" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.19208e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos2/pedras_todas/pedras3" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, -1.49697, -4.03679)
-
-[node name="pedras_menores_4" type="Node3D" parent="Elementos2/pedras_todas"]
-transform = Transform3D(0.257439, 0, 0.110115, 0, 0.28, 0, -0.110115, 0, 0.257439, -31.8196, -1.43303, -17.4438)
-
-[node name="pedra" parent="Elementos2/pedras_todas/pedras_menores_4" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.364129, 0, -0.931348, 0, 1, 0, 0.931348, 0, 0.364129, -15.6813, 1, -5.69188)
-
-[node name="pedra2" parent="Elementos2/pedras_todas/pedras_menores_4" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.19208e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos2/pedras_todas/pedras_menores_4" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, 0.691473, -4.03679)
-
-[node name="pedras_menores_5" type="Node3D" parent="Elementos2/pedras_todas"]
-transform = Transform3D(0.277749, 0, 0.0354326, 0, 0.28, 0, -0.0354326, 0, 0.277749, -24.7677, -1.3746, -16.8033)
-
-[node name="pedra" parent="Elementos2/pedras_todas/pedras_menores_5" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.573891, 0, -0.818932, 0, 1, 0, 0.818932, 0, 0.573891, -6.48283, 1, -18.1936)
-
-[node name="pedra2" parent="Elementos2/pedras_todas/pedras_menores_5" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.236295, -0.00515543, 0.971668, 6.32486e-10, -0.999986, -0.00530568, 0.971681, 0.00125371, -0.236292, 4.0351, 1, -24.3969)
-
-[node name="pedra3" parent="Elementos2/pedras_todas/pedras_menores_5" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.109925, 0, -0.993939, 0, 1, 0, 0.993939, 0, -0.109925, 18.5522, 0.691472, -22.5783)
-
-[node name="pedras_menores_6" type="Node3D" parent="Elementos2/pedras_todas"]
-transform = Transform3D(0.277749, 0, 0.0354326, 0, 0.28, 0, -0.0354326, 0, 0.277749, -12.0772, -1.3746, -23.3781)
-
-[node name="pedra" parent="Elementos2/pedras_todas/pedras_menores_6" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.265539, 0, -0.9641, 0, 1, 0, 0.9641, 0, 0.265539, -15.6813, 1, -5.69189)
-
-[node name="pedra2" parent="Elementos2/pedras_todas/pedras_menores_6" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.19208e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos2/pedras_todas/pedras_menores_6" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, 0.691472, -4.03679)
-
-[node name="pedras_menores_7" type="Node3D" parent="Elementos2/pedras_todas"]
-transform = Transform3D(0.262543, 0, -0.0973208, 0, 0.28, 0, 0.0973208, 0, 0.262543, -2.08833, -1.3746, -21.4417)
-
-[node name="pedra" parent="Elementos2/pedras_todas/pedras_menores_7" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.265539, 0, -0.9641, 0, 1, 0, 0.9641, 0, 0.265539, -15.6813, 1, -5.69189)
-
-[node name="pedra2" parent="Elementos2/pedras_todas/pedras_menores_7" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.19208e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos2/pedras_todas/pedras_menores_7" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, 0.691472, -4.03679)
-
-[node name="pedras_menores_8" type="Node3D" parent="Elementos2/pedras_todas"]
-transform = Transform3D(0.262543, 0, -0.0973208, 0, 0.28, 0, 0.0973208, 0, 0.262543, 8.02582, -1.3746, -16.8342)
-
-[node name="pedra" parent="Elementos2/pedras_todas/pedras_menores_8" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(0.265539, 0, -0.9641, 0, 1, 0, 0.9641, 0, 0.265539, -15.6813, 1, -5.69189)
-
-[node name="pedra2" parent="Elementos2/pedras_todas/pedras_menores_8" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-1.19208e-07, -0.00530568, 0.999986, 6.32486e-10, -0.999986, -0.00530568, 1, 0, 1.19209e-07, -3.99545, 1, -9.23413)
-
-[node name="pedra3" parent="Elementos2/pedras_todas/pedras_menores_8" instance=ExtResource("3_jrtpm")]
-transform = Transform3D(-0.341676, 0, -0.939818, 0, 1, 0, 0.939818, 0, -0.341676, 9.68076, 0.691472, -4.03679)
-
-[node name="arbustos_todos" type="Node3D" parent="Elementos2"]
-
-[node name="arbusto_medio" parent="Elementos2/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.413872, 0, -0.684624, 0, 0.8, 0, 0.684624, 0, 0.413872, -1.94985, 0.819973, -29.9599)
-
-[node name="arbusto_medio2" parent="Elementos2/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.409586, 0, 0.687196, 0, 0.8, 0, -0.687196, 0, 0.409586, -14.3228, 0.819973, -30.7775)
-
-[node name="arbusto_medio6" parent="Elementos2/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.634138, 0, 0.487718, 0, 0.8, 0, -0.487718, 0, 0.634138, -19.5499, 0.819973, -26.3782)
-
-[node name="arbusto_medio7" parent="Elementos2/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -23.1762, 0.819973, -31.225)
-
-[node name="arbusto_medio8" parent="Elementos2/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -30.9959, 0.819973, -23.8915)
-
-[node name="arbusto_medio9" parent="Elementos2/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -34.7359, 0.819973, -23.5866)
-
-[node name="arbusto_medio5" parent="Elementos2/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.282362, 0, -0.748513, 0, 0.8, 0, 0.748513, 0, 0.282362, -17.696, 0.819974, -32.5037)
-
-[node name="arbusto_grande" parent="Elementos2/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.357726, 0, -0.89086, 0, 0.96, 0, 0.89086, 0, 0.357726, -0.0228968, 0.819972, -21.6569)
-
-[node name="arbusto_grande2" parent="Elementos2/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.315063, 0, -0.906827, 0, 0.96, 0, 0.906827, 0, 0.315063, -15.0047, 0.819973, -23.7245)
-
-[node name="arbusto_pequeno" parent="Elementos2/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.664495, 0, -0.0857133, 0, 0.67, 0, 0.0857133, 0, 0.664495, -1.44005, 0.819973, -22.3853)
-
-[node name="arbusto_pequeno2" parent="Elementos2/arbustos_todos" instance=ExtResource("5_j3ppy")]
-transform = Transform3D(0.664495, 0, -0.0857133, 0, 0.67, 0, 0.0857133, 0, 0.664495, -25.2464, 0.819973, -21.6302)
-
-[node name="luzes" type="Node3D" parent="Elementos2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.75, 4.76837e-07)
-
-[node name="Luz" parent="Elementos2/luzes" instance=ExtResource("4_jmm1a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.25, 4.66968, -33)
-
-[node name="Luz2" parent="Elementos2/luzes" instance=ExtResource("4_jmm1a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.07591, 1.95397, -34.25)
-
-[node name="Luz3" parent="Elementos2/luzes" instance=ExtResource("4_jmm1a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.952685, 1.95397, -34.25)
-
-[node name="Luz4" parent="Elementos2/luzes" instance=ExtResource("4_jmm1a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.093, 1.95397, -31.8332)
-
-[node name="Luz5" parent="Elementos2/luzes" instance=ExtResource("4_jmm1a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2712, 1.95397, -30.3566)
-
-[node name="Luz6" parent="Elementos2/luzes" instance=ExtResource("4_jmm1a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.5121, 2.87812, -30.3566)
+[node name="templearc_side2" parent="Saida" instance=ExtResource("14_3536b")]
+transform = Transform3D(-0.336943, 0, 0.215567, 0, 0.4, 0, -0.215567, 0, -0.336943, 0.532932, 5.12594, -3.08165)

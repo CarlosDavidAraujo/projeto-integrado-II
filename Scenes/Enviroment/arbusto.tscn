@@ -9,7 +9,7 @@ alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_color = Color(0.407914, 0.397443, 0.0641372, 1)
+albedo_color = Color(0.67451, 0.396078, 0.0627451, 1)
 albedo_texture = ExtResource("1_w2ad6")
 roughness = 0.75
 
@@ -50,7 +50,7 @@ alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_color = Color(0.678431, 0.607843, 0.133334, 1)
+albedo_color = Color(0.988235, 0.647059, 0.239216, 1)
 albedo_texture = ExtResource("1_w2ad6")
 roughness = 0.881818
 
@@ -91,7 +91,7 @@ alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_color = Color(0.290567, 0.26679, 0, 1)
+albedo_color = Color(0.317647, 0.0823529, 0, 1)
 albedo_texture = ExtResource("1_w2ad6")
 roughness = 0.818182
 
