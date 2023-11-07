@@ -61,4 +61,6 @@ dash={
 
 [rendering]
 
+limits/forward_renderer/threaded_render_minimum_instances=1000
 anti_aliasing/defaults/default_clear_color=Color(0.167569, 0.564567, 0.738999, 1)
+lights_and_shadows/main_scene="res://Scenes/Player.tscn"

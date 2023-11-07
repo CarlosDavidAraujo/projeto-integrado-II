@@ -25558,7 +25558,7 @@ metadata/_edit_group_ = true
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot"]
-transform = Transform3D(0.999757, 0.00829333, -0.0204365, 0.00829343, 0.717239, 0.696778, 0.0204365, -0.696778, 0.716996, -0.209271, 7.13505, 7.453)
+transform = Transform3D(0.999757, 0.00829333, -0.0204365, 0.00829343, 0.71724, 0.696778, 0.0204365, -0.696778, 0.716996, -0.260599, 8.88507, 9.36293)
 fov = 61.3145
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dewe0slwqv23a"
-path="res://.godot/imported/arvore_proj2.gltf-f042ea2a13b7e18ea1d3102a4f1b10c7.scn"
+path="res://.godot/imported/arvore_proj2.gltf-2757cd36093785f67ba0983ff9c03175.scn"
 
 [deps]
 
-source_file="res://Assets/Modelos nossos/Cenario/arvore_proj2.gltf"
-dest_files=["res://.godot/imported/arvore_proj2.gltf-f042ea2a13b7e18ea1d3102a4f1b10c7.scn"]
+source_file="res://Assets/Modelos nossos/Cenario/arvore/arvore_proj2.gltf"
+dest_files=["res://.godot/imported/arvore_proj2.gltf-2757cd36093785f67ba0983ff9c03175.scn"]
 
 [params]
 

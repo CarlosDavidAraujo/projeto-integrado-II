@@ -1,7 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://qq1mn71fbpoa"]
+[gd_scene load_steps=21 format=3 uid="uid://qq1mn71fbpoa"]
 
 [ext_resource type="PackedScene" uid="uid://cmp4lebu2ekn1" path="res://Scenes/Player.tscn" id="1_hb7re"]
-[ext_resource type="PackedScene" uid="uid://8hr38yv7or1i" path="res://Scenes/Ground.tscn" id="2_junw0"]
 [ext_resource type="Script" path="res://Scripts/interface/EnemyLifeBar.gd" id="4_2sdt5"]
 [ext_resource type="PackedScene" uid="uid://cap7r5gvxah3x" path="res://Scenes/Wolf.tscn" id="4_je7xd"]
 [ext_resource type="Script" path="res://Scripts/interface/PlayerHealthBar.gd" id="5_ekmag"]
@@ -1029,10 +1028,7 @@ _data = {
 [node name="Main" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("1_hb7re")]
-transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, 117.66, 1, 0)
-
-[node name="Ground" parent="." instance=ExtResource("2_junw0")]
-transform = Transform3D(10.2566, 0, 9.50351, 0, 0.3, 0, -10.2566, 0, 9.50351, 0, -27, 0)
+transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, -33.3986, 1, -84.3549)
 
 [node name="Wolf" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_je7xd")]
 transform = Transform3D(-0.0866314, 0, -3.99906, 0, 4, 0, 3.99906, 0, -0.0866314, -17.434, 1, -1.907)
@@ -1066,7 +1062,7 @@ script = ExtResource("5_ekmag")
 player = NodePath("../../Player")
 
 [node name="bg" parent="." instance=ExtResource("5_xttaf")]
-transform = Transform3D(2.25243, 0, -3.30553, 0, 4, 0, 3.30553, 0, 2.25243, 17, -1.072, -17)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 17, -1.072, -17)
 
 [node name="modelo_fiel_espirito_01" type="Node3D" parent="."]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7, 0, -16)
