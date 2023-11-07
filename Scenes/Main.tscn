@@ -1028,10 +1028,10 @@ _data = {
 [node name="Main" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("1_hb7re")]
-transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, -33.3986, 1, -84.3549)
+transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, -28.9982, 0.999985, 91.8938)
 
 [node name="Wolf" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_je7xd")]
-transform = Transform3D(-0.0866314, 0, -3.99906, 0, 4, 0, 3.99906, 0, -0.0866314, -17.434, 1, -1.907)
+transform = Transform3D(-0.0866314, 0, -3.99906, 0, 4, 0, 3.99906, 0, -0.0866314, -17.434, 2, -1.907)
 player = NodePath("../Player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -1062,10 +1062,10 @@ script = ExtResource("5_ekmag")
 player = NodePath("../../Player")
 
 [node name="bg" parent="." instance=ExtResource("5_xttaf")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 17, -1.072, -17)
+transform = Transform3D(2.11375, 0, 3.39589, 0, 4, 0, -3.39589, 0, 2.11375, -15.375, -1.072, 27.5692)
 
 [node name="modelo_fiel_espirito_01" type="Node3D" parent="."]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7, 0, -16)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7, 2.4, -16)
 
 [node name="rig_principal_001" type="Node3D" parent="modelo_fiel_espirito_01"]
 

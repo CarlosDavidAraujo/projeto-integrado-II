@@ -7004,9 +7004,8 @@ _data = {
 "run": SubResource("Animation_cqml3")
 }
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hoaeo"]
-radius = 0.557994
-height = 2.94431
+[sub_resource type="BoxShape3D" id="BoxShape3D_u1ptr"]
+size = Vector3(0.814923, 2.18734, 1.32269)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_76vf0"]
 margin = 0.0
@@ -9025,8 +9024,8 @@ libraries = {
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.17, 0, 0, 0, -5.11423e-08, -1.17, 0, 1.17, -5.11423e-08, -0.00450802, 0.834884, -0.538111)
-shape = SubResource("CapsuleShape3D_hoaeo")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.00450802, 0.668252, -0.596505)
+shape = SubResource("BoxShape3D_u1ptr")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_id5kk")
