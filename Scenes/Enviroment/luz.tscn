@@ -6,5 +6,4 @@
 light_color = Color(1, 0.184314, 0.227451, 1)
 light_energy = 16.0
 light_indirect_energy = 8.075
-shadow_enabled = true
 omni_range = 147.913

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bcydxagauvc7w"]
+[gd_scene load_steps=14 format=3 uid="uid://bcydxagauvc7w"]
 
 [ext_resource type="Texture2D" uid="uid://dgril8scukr7p" path="res://Assets/Modelos nossos/Cenario/arvore/arvore_proj2_folha pincel.png" id="1_qdluk"]
 
@@ -162,13 +162,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4vqaw")
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_kqxme"]
-height = 8.8328
-radius = 1.09003
-
 [node name="arvore_proj2" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="tronco" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.786608, 0, 0, 0, 0.786608, 0, 0, 0, 0.786608, 0, 0, 0)
@@ -189,7 +186,3 @@ skeleton = NodePath("")
 transform = Transform3D(0.630755, 0.338522, 0.326042, -0.262038, 0.706284, -0.226386, -0.390175, 0.072919, 0.679116, 1.46476, 7.54581, -2.1924)
 mesh = SubResource("ArrayMesh_veied")
 skeleton = NodePath("")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.18964, 0)
-shape = SubResource("CylinderShape3D_kqxme")

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8wofmlvnb8sp"
-path.s3tc="res://.godot/imported/modelo_fiel_espirito_01_tex_espirito_corpo.png-dc96f71a50535fc2d3fc9a5fce45b472.s3tc.ctex"
+uid="uid://ci617764hlnka"
+path.s3tc="res://.godot/imported/modelo_fiel_espirito_tex_mascara.png-ae67a40a8d4a46ef728519ddb9e58f0c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Assets/Modelos nossos/Espirito/modelo_fiel_espirito_01_tex_espirito_corpo.png"
-dest_files=["res://.godot/imported/modelo_fiel_espirito_01_tex_espirito_corpo.png-dc96f71a50535fc2d3fc9a5fce45b472.s3tc.ctex"]
+source_file="res://Assets/Modelos nossos/Espirito/modelo_fiel_espirito_tex_mascara.png"
+dest_files=["res://.godot/imported/modelo_fiel_espirito_tex_mascara.png-ae67a40a8d4a46ef728519ddb9e58f0c.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b2fjtq05sd7d3"]
+
+[node name="Luz" type="Node3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0, 0.592157, 0.890196, 1)
+light_energy = 3.71
+light_indirect_energy = 11.123
+light_size = 0.292
+light_specular = 4.877
+shadow_bias = 3.8
+shadow_normal_bias = 3.3
+omni_range = 147.913
