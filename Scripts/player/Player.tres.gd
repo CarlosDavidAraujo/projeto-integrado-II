@@ -33,7 +33,7 @@ func _on_hitbox_body_entered(body):
 	if body.is_in_group("mob"):
 		if body.has_method("hurt"):
 			body.hurt()
-			damege.play()
+			
 
 func get_input_direction() -> Vector3:
 	var input_vector: Vector3 = Vector3.ZERO
@@ -46,6 +46,7 @@ func isMoving() ->bool:
 	
 func hurt(dmg: float):
 	current_health -= dmg
+	damege.play()
 	if current_health <= 0:
 		isDead = true
 	HealthChanged.emit()

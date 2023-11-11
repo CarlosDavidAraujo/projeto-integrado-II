@@ -33,10 +33,11 @@ func _on_attack_range_body_entered(body):
 func _on_attack_range_body_exited(body):
 	if body.is_in_group("player"):
 		is_in_melee_range = false
-		damege.play()
+		
 
 func hurt():
 	currentHealth -= player.damage
+	damege.play()
 	if currentHealth <= 0:
 		isDead = true
 		state_machine.set_state("dead")
