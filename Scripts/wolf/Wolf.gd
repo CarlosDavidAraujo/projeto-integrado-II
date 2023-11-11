@@ -10,6 +10,7 @@ signal healthChanged
 @onready var wolf_anim = $espirito_02/AnimationPlayer
 @onready var attack_collision = $AttackHitBox/CollisionShape3D
 @onready var state_machine: StateMachine = $StateMachine
+@onready var damege = $damege
 
 var speed = 20
 var isDead = false
@@ -26,10 +27,13 @@ func _physics_process(delta):
 func _on_attack_range_body_entered(body):
 	if body.is_in_group("player"):
 		is_in_melee_range = true
+		
+		
 
 func _on_attack_range_body_exited(body):
 	if body.is_in_group("player"):
 		is_in_melee_range = false
+		damege.play()
 
 func hurt():
 	currentHealth -= player.damage

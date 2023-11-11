@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cap7r5gvxah3x"]
+[gd_scene load_steps=20 format=3 uid="uid://cap7r5gvxah3x"]
 
 [ext_resource type="Script" path="res://Scripts/wolf/Wolf.gd" id="1_sko3i"]
 [ext_resource type="Script" path="res://Scripts/state machine/StateMachine.gd" id="2_id5kk"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/wolf/Idle.gd" id="3_g7fci"]
 [ext_resource type="Script" path="res://Scripts/wolf/Chase.gd" id="4_puiao"]
 [ext_resource type="Script" path="res://Scripts/wolf/Attack.gd" id="5_76sng"]
+[ext_resource type="AudioStream" uid="uid://btjsxlemua1r8" path="res://Assets/Audio/damege.mp3" id="7_lysti"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bttng"]
 resource_name = "Material"
@@ -9066,16 +9067,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.21214)
 shape = SubResource("CylinderShape3D_l6nl6")
 
+[node name="damege" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_lysti")
+volume_db = 1.548
+pitch_scale = 1.25
+
 [connection signal="animation_finished" from="espirito_02/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
-[connection signal="body_entered" from="CombatZone" to="StateMachine/Idle" method="_on_combat_zone_body_entered"]
 [connection signal="body_entered" from="CombatZone" to="StateMachine/Idle" method="_on_attack_zone_body_entered"]
-[connection signal="body_exited" from="CombatZone" to="StateMachine/Chase" method="_on_combat_zone_body_exited"]
+[connection signal="body_entered" from="CombatZone" to="StateMachine/Idle" method="_on_combat_zone_body_entered"]
 [connection signal="body_exited" from="CombatZone" to="StateMachine/Chase" method="_on_attack_zone_body_exited"]
+[connection signal="body_exited" from="CombatZone" to="StateMachine/Chase" method="_on_combat_zone_body_exited"]
 [connection signal="body_entered" from="AttackRange" to="." method="_on_attack_range_body_entered"]
-[connection signal="body_entered" from="AttackRange" to="StateMachine/Idle" method="_on_combat_zone_body_entered"]
 [connection signal="body_entered" from="AttackRange" to="StateMachine/Idle" method="_on_attack_zone_body_entered"]
+[connection signal="body_entered" from="AttackRange" to="StateMachine/Idle" method="_on_combat_zone_body_entered"]
 [connection signal="body_entered" from="AttackRange" to="StateMachine/Chase" method="_on_attack_range_body_entered"]
 [connection signal="body_exited" from="AttackRange" to="." method="_on_attack_range_body_exited"]
-[connection signal="body_exited" from="AttackRange" to="StateMachine/Chase" method="_on_combat_zone_body_exited"]
 [connection signal="body_exited" from="AttackRange" to="StateMachine/Chase" method="_on_attack_zone_body_exited"]
+[connection signal="body_exited" from="AttackRange" to="StateMachine/Chase" method="_on_combat_zone_body_exited"]
 [connection signal="body_entered" from="AttackHitBox" to="StateMachine/Attack" method="_on_attack_hit_box_body_entered"]

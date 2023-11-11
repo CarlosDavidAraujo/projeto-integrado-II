@@ -10,6 +10,8 @@ signal HealthChanged
 @onready var animation_player = $Pivot/AnimationPlayer
 @onready var hitbox = $Pivot/rig/Skeleton3D/WeaponAtachment/Hitbox
 @onready var state_machine: StateMachine = $StateMachine
+@onready var damege = $damege
+
 
 var current_health = max_health
 var isAttacking = false
@@ -17,7 +19,11 @@ var isDashing = false
 var isDead = false
 var canDash = true
 
-func _physics_process(delta):		
+
+
+
+
+func _physics_process(delta):
 	# Vertical Velocity
 	if not is_on_floor(): # If in the air, fall towards the floor. Literally gravity
 		velocity.y = velocity.y - fall_acceleration
@@ -27,6 +33,7 @@ func _on_hitbox_body_entered(body):
 	if body.is_in_group("mob"):
 		if body.has_method("hurt"):
 			body.hurt()
+			damege.play()
 
 func get_input_direction() -> Vector3:
 	var input_vector: Vector3 = Vector3.ZERO
