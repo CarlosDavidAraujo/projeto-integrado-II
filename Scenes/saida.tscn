@@ -21,24 +21,35 @@ transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 
 
 [node name="rock_big" parent="pedras" instance=ExtResource("1_uhkvw")]
 transform = Transform3D(-0.965502, -0.0621831, -0.255677, 0.0580867, 1.15456, -0.396222, 0.253835, -0.500729, -0.881837, -3.50052, 5.04538, 26.5046)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_big3" parent="pedras" instance=ExtResource("1_uhkvw")]
 transform = Transform3D(-0.96363, -0.0239537, -0.266563, 0.0576183, 1.20863, -0.2767, 0.260954, -0.355315, -0.923245, -5.47675, 13.1472, 18.9877)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_big2" parent="pedras" instance=ExtResource("1_uhkvw")]
 transform = Transform3D(-0.967135, 0.166512, -0.215912, -6.92061e-08, 1.05297, 0.528127, 0.254264, 0.633354, -0.821257, -6.36061, 10.4856, 8.67342)
+collision_layer = 4
+collision_mask = 0
 
 [node name="templo" type="Node3D" parent="."]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 6.17087, 0, -15.2917)
 
 [node name="temple_tiles_detail_10" parent="templo" instance=ExtResource("2_xltr1")]
 transform = Transform3D(0.387413, 0, 0.0995572, 0, 0.4, 0, -0.0995572, 0, 0.387413, 4.03905, 0.819977, 10.4186)
+collision_layer = 0
 
 [node name="temple_tiles_detail_3" parent="templo" instance=ExtResource("3_jq358")]
 transform = Transform3D(-0.386854, 0, -0.101706, 0, 0.4, 0, 0.101706, 0, -0.386854, 1.10436, 0.819976, 19.4001)
+collision_layer = 0
+collision_mask = 0
 
 [node name="temple_tiles_detail_8" parent="templo" instance=ExtResource("3_jq358")]
 transform = Transform3D(-0.394571, 0, -0.0656814, 0, 0.4, 0, 0.0656814, 0, -0.394571, 2.61865, 0.819976, 19.5178)
+collision_layer = 0
+collision_mask = 0
 
 [node name="temple_tiles_detail_5" parent="templo" instance=ExtResource("4_v43k4")]
 transform = Transform3D(-0.386854, 0, -0.101706, 0, 0.4, 0, 0.101706, 0, -0.386854, -0.610878, 0.819976, 9.70243)

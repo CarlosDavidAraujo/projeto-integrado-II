@@ -36,7 +36,6 @@ func _on_animation_player_animation_finished(anim_name):
 
 func light_attack():
 	if Input.is_action_just_pressed("light_attack") and not player.isDashing and can_chain_attack:
-		slash_attack.play()
 		player.damage = 5.0
 		can_chain_attack = false
 		player.isAttacking = true
@@ -50,7 +49,6 @@ func light_attack():
 			
 func heavy_attack():
 	if Input.is_action_just_pressed("heavy_attack") and not player.isDashing and can_chain_attack:
-		slash_attack.play()
 		player.damage = 10
 		can_chain_attack = false
 		player.isAttacking = true
