@@ -1,9 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://cqxdr2yhulmfl"]
+[gd_scene load_steps=17 format=3 uid="uid://cqxdr2yhulmfl"]
 
 [ext_resource type="PackedScene" uid="uid://8hr38yv7or1i" path="res://Scenes/Enviroment/Ground.tscn" id="1_l1vwk"]
 [ext_resource type="PackedScene" uid="uid://c7xl6h61vcfql" path="res://Scenes/saida.tscn" id="2_tjwf7"]
 [ext_resource type="PackedScene" uid="uid://bbvl3yirlk7yh" path="res://Scenes/murinho_vegetal.tscn" id="6_1wl7q"]
 [ext_resource type="PackedScene" uid="uid://jdteth8nguhk" path="res://Scenes/Enviroment/luz.tscn" id="7_151ew"]
+[ext_resource type="Texture2D" uid="uid://bl42twt6hxvcc" path="res://Assets/Modelos nossos/texturas/rachadura.png" id="9_ogtv6"]
+[ext_resource type="PackedScene" uid="uid://bvawamfxhcrbe" path="res://Scenes/Enviroment/arbusto.tscn" id="10_amc1n"]
+[ext_resource type="PackedScene" uid="uid://b8hwrwq5s346g" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_2.tscn" id="10_vv63u"]
 [ext_resource type="PackedScene" uid="uid://b2fjtq05sd7d3" path="res://Scenes/Enviroment/luz_azul.tscn" id="15_kagbj"]
 [ext_resource type="PackedScene" uid="uid://nm7hbarhn0jo" path="res://Scenes/grande_muro.tscn" id="16_fm7ad"]
 [ext_resource type="PackedScene" uid="uid://bc1l4deuw25a0" path="res://Scenes/Enviroment/externo/base/rocks/rock_small.tscn" id="17_di0sp"]
@@ -59,8 +62,9 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 environment = SubResource("Environment_vctvg")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.837895, 0.481239, 0.257567, 0.368129, -0.846639, 0.384295, 0.403004, -0.227181, -0.886553, 3.75879, 15.5, 15.3167)
-light_color = Color(0.933333, 0.698039, 0.333333, 1)
+transform = Transform3D(-0.206707, 0.53229, 0.820938, 0.327432, -0.753043, 0.570713, 0.921987, 0.386772, -0.0186297, 3.75879, 15.5, 15.3167)
+light_color = Color(0.933333, 0.584314, 0.333333, 1)
+light_energy = 2.28
 shadow_enabled = true
 shadow_bias = 0.0
 shadow_opacity = 0.62
@@ -71,6 +75,7 @@ directional_shadow_max_distance = 2901.3
 
 [node name="Ground" parent="." instance=ExtResource("1_l1vwk")]
 transform = Transform3D(-6.92825e-08, 0, 1.585, 0, 1.585, 0, -1.585, 0, -6.92825e-08, 4.07545, 1.52588e-05, -0.27566)
+metadata/_edit_lock_ = true
 
 [node name="Saida" parent="." instance=ExtResource("2_tjwf7")]
 transform = Transform3D(-0.996058, 0, -0.088703, 0, 1, 0, 0.088703, 0, -0.996058, 50.721, -0.569742, 2.4717)
@@ -194,6 +199,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.4223, -0.075016, 23.0645)
 [node name="Decals" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.059, 0)
 
+[node name="Decal" type="Decal" parent="Decals"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6089, 0.188119, 5.16449)
+size = Vector3(6.62544, 0.208177, 7.93314)
+texture_albedo = ExtResource("9_ogtv6")
+texture_emission = ExtResource("9_ogtv6")
+emission_energy = 3.41
+
+[node name="Decal6" type="Decal" parent="Decals"]
+transform = Transform3D(-0.0441499, -0.998576, 0.0299446, 0.826422, -0.0533469, -0.560519, 0.561318, 0, 0.8276, 49.9561, 5.42236, -0.587622)
+size = Vector3(6.62544, 2, 7.93314)
+texture_albedo = ExtResource("9_ogtv6")
+texture_emission = ExtResource("9_ogtv6")
+emission_energy = 3.41
+
+[node name="Decal7" type="Decal" parent="Decals"]
+transform = Transform3D(-0.0441499, -0.998576, 0.0299446, 0.826422, -0.0533469, -0.560519, 0.561318, 0, 0.8276, 50.4634, 5.42236, 7.00642)
+size = Vector3(6.62544, 2, 7.93314)
+texture_albedo = ExtResource("9_ogtv6")
+texture_emission = ExtResource("9_ogtv6")
+emission_energy = 3.41
+
+[node name="Decal8" type="Decal" parent="Decals"]
+transform = Transform3D(0.0117988, -0.993642, 0.111965, 0.826422, -0.0533469, -0.560519, 0.562928, 0.0991436, 0.820538, 49.9544, 10.3672, 3.60061)
+size = Vector3(6.62544, 2, 7.93314)
+texture_albedo = ExtResource("9_ogtv6")
+texture_emission = ExtResource("9_ogtv6")
+emission_energy = 3.41
+
+[node name="temple_tiles_detail_2" parent="Decals" instance=ExtResource("10_vv63u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7184, 0.239258, 5.19811)
+
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(0.235628, 0.0427308, 0.071787, 0, -0.214823, 0.127872, 0.0835422, -0.120521, -0.202473, -35.7838, 9.17755, -6.63005)
 light_color = Color(0.960784, 0.607843, 0.501961, 1)
@@ -205,3 +241,58 @@ shadow_opacity = 0.53
 spot_range = 98.0
 spot_attenuation = 0.594603
 spot_angle = 26.9858
+
+[node name="pedrinhas" type="Node3D" parent="."]
+
+[node name="rock_small5" parent="pedrinhas" instance=ExtResource("17_di0sp")]
+transform = Transform3D(0.152559, 0, -0.0750054, -0.0749963, 0.00265245, -0.15254, 0.00117028, 0.169979, 0.00238032, 26.8466, 0.180256, 2.9604)
+
+[node name="rock_small6" parent="pedrinhas" instance=ExtResource("17_di0sp")]
+transform = Transform3D(0.0334687, -0.0794185, 0.146535, -0.16483, 0.00639351, 0.0411124, -0.0247174, -0.150173, -0.0757445, 12.9566, 0.180258, 13.9813)
+
+[node name="rock_small7" parent="pedrinhas" instance=ExtResource("17_di0sp")]
+transform = Transform3D(-0.218798, -0.134888, -0.0644799, 0.0595767, 0.0261613, -0.256887, 0.137125, -0.226596, 0.00872517, 4.87779, 0.180258, 10.1971)
+
+[node name="rock_small9" parent="pedrinhas" instance=ExtResource("17_di0sp")]
+transform = Transform3D(-0.178744, 0.190591, 0.0441668, -0.0632502, 0.000316473, -0.257341, -0.185135, -0.18412, 0.0452767, 4.89357, 0.180258, -5.17734)
+
+[node name="rock_small10" parent="pedrinhas" instance=ExtResource("17_di0sp")]
+transform = Transform3D(-0.0341234, 0.262649, 0.00870998, -0.0632502, 0.000316472, -0.257341, -0.255069, -0.035216, 0.0626484, 4.89357, 0.180258, -11.7336)
+
+[node name="rock_small11" parent="pedrinhas" instance=ExtResource("17_di0sp")]
+transform = Transform3D(-0.0341234, 0.262649, 0.00870998, -0.0632502, 0.000316472, -0.257341, -0.255069, -0.035216, 0.0626484, 15.7936, 0.180258, -4.92677)
+
+[node name="rock_small12" parent="pedrinhas" instance=ExtResource("17_di0sp")]
+transform = Transform3D(0.162634, 0.205421, -0.0397201, -0.0632502, 0.000316472, -0.257341, -0.199436, 0.167414, 0.049224, 26.8947, 0.180258, -4.92677)
+
+[node name="rock_small13" parent="pedrinhas" instance=ExtResource("17_di0sp")]
+transform = Transform3D(-0.176089, 0.193193, 0.0435175, -0.0632502, 0.000316472, -0.257341, -0.187662, -0.181387, 0.0459011, 24.9619, 0.180258, 10.907)
+
+[node name="rock_small8" parent="pedrinhas" instance=ExtResource("17_di0sp")]
+transform = Transform3D(-0.000301588, -0.265, -0.00025176, -0.0632502, 0.00031647, -0.257341, 0.257341, -0.000232773, -0.0632505, 1.0337, 0.180258, 16.3633)
+
+[node name="rock_small15" parent="pedrinhas" instance=ExtResource("17_di0sp")]
+transform = Transform3D(-0.000301588, -0.265, -0.00025176, -0.0632502, 0.00031647, -0.257341, 0.257341, -0.000232773, -0.0632505, 30.6652, 0.180258, 16.3633)
+
+[node name="arbustos soltos" type="Node3D" parent="."]
+
+[node name="arbusto_proj2" parent="arbustos soltos" instance=ExtResource("10_amc1n")]
+transform = Transform3D(-0.225523, 0, -0.87645, 0, 0.905, 0, 0.87645, 0, -0.225523, 3.23296, 0, 1.2836)
+
+[node name="arbusto_proj8" parent="arbustos soltos" instance=ExtResource("10_amc1n")]
+transform = Transform3D(-0.637234, 0, 0.642618, 0, 0.905, 0, -0.642618, 0, -0.637234, 18.8612, 0, 12.9067)
+
+[node name="arbusto_proj6" parent="arbustos soltos" instance=ExtResource("10_amc1n")]
+transform = Transform3D(-0.535632, 0, -0.729468, 0, 0.905, 0, 0.729468, 0, -0.535632, 27.3254, 0, -2.55417)
+
+[node name="arbusto_proj7" parent="arbustos soltos" instance=ExtResource("10_amc1n")]
+transform = Transform3D(0.474853, 0, -0.770415, 0, 0.905, 0, 0.770415, 0, 0.474853, 7.5796, 0, -10.806)
+
+[node name="arbusto_proj3" parent="arbustos soltos" instance=ExtResource("10_amc1n")]
+transform = Transform3D(0.660596, 0, -0.231545, 0, 0.7, 0, 0.231545, 0, 0.660596, 4.17982, 0, 2.46757)
+
+[node name="arbusto_proj4" parent="arbustos soltos" instance=ExtResource("10_amc1n")]
+transform = Transform3D(-0.418177, 0, 0.802592, 0, 0.905, 0, -0.802592, 0, -0.418177, 31.5505, 0, -11.993)
+
+[node name="arbusto_proj5" parent="arbustos soltos" instance=ExtResource("10_amc1n")]
+transform = Transform3D(-0.166546, 0, 0.679899, 0, 0.7, 0, -0.679899, 0, -0.166546, 32.4973, 0, -10.809)
