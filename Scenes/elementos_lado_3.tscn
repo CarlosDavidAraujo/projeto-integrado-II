@@ -141,6 +141,12 @@ transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -17.25, 
 [node name="arbusto_medio" parent="Elementos/arbustos_todos" instance=ExtResource("4_r88j1")]
 transform = Transform3D(1.2235, 0, -1.58211, 0, 2, 0, 1.58211, 0, 1.2235, -4.74837, 0.819973, 9.79745)
 
+[node name="arbusto_medio4" parent="Elementos/arbustos_todos" instance=ExtResource("4_r88j1")]
+transform = Transform3D(1.2235, 0, -1.58211, 0, 2, 0, 1.58211, 0, 1.2235, 1.52841, 0.819973, 2.75163)
+
+[node name="arbusto_medio8" parent="Elementos/arbustos_todos" instance=ExtResource("4_r88j1")]
+transform = Transform3D(1.2235, 0, -1.58211, 0, 2, 0, 1.58211, 0, 1.2235, -10.957, 0.819973, 3.6847)
+
 [node name="arbusto_medio3" parent="Elementos/arbustos_todos" instance=ExtResource("4_r88j1")]
 transform = Transform3D(1.2235, 0, -1.58211, 0, 2, 0, 1.58211, 0, 1.2235, 17.0682, 0.819973, 7.70442)
 

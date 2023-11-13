@@ -78,7 +78,7 @@ transform = Transform3D(-0.996058, 0, -0.088703, 0, 1, 0, 0.088703, 0, -0.996058
 [node name="Arvores" type="Node3D" parent="."]
 
 [node name="elementos_lado5" parent="Arvores" instance=ExtResource("17_fsuvr")]
-transform = Transform3D(0.999969, 0, 0.00783649, 0, 1, 0, -0.00783649, 0, 0.999969, 35.5841, 0.25, -25.9033)
+transform = Transform3D(0.999969, 0, 0.00783649, 0, 1, 0, -0.00783649, 0, 0.999969, 35.5841, 0.0114288, -25.9033)
 
 [node name="elementos_lado7" parent="Arvores" instance=ExtResource("17_fsuvr")]
 transform = Transform3D(-0.998403, 0, -0.0565011, 0, 1, 0, 0.0565011, 0, -0.998403, 37.745, 0.25, 36.0723)
@@ -96,10 +96,10 @@ transform = Transform3D(-0.998403, 0, -0.0565011, 0, 1, 0, 0.0565011, 0, -0.9984
 transform = Transform3D(-0.449257, 0, 0.893403, 0, 1, 0, -0.893403, 0, -0.449257, -55.6569, 0.25, 12.5102)
 
 [node name="elementos_lado6" parent="Arvores" instance=ExtResource("17_fsuvr")]
-transform = Transform3D(0.999969, 0, 0.00783649, 0, 1, 0, -0.00783649, 0, 0.999969, 4.89418, 0.25, -25.9033)
+transform = Transform3D(0.999969, 0, 0.00783649, 0, 1, 0, -0.00783649, 0, 0.999969, 4.89418, 0.0114288, -25.9033)
 
 [node name="elementos_lado10" parent="Arvores" instance=ExtResource("17_fsuvr")]
-transform = Transform3D(0.999969, 0, 0.00783649, 0, 1, 0, -0.00783649, 0, 0.999969, -29.3791, 0.25, -7.88833)
+transform = Transform3D(0.999969, 0, 0.00783649, 0, 1, 0, -0.00783649, 0, 0.999969, -29.3791, -0.161997, -7.88833)
 
 [node name="elementos_lado12" parent="Arvores" instance=ExtResource("17_fsuvr")]
 transform = Transform3D(0.969338, 0, 0.24573, 0, 1, 0, -0.24573, 0, 0.969338, -60.8703, 0.25, -10.6461)
@@ -132,13 +132,13 @@ transform = Transform3D(0.162564, -0.0588373, -0.984942, 0.00716342, 0.998265, -
 transform = Transform3D(0.800447, 0.574726, 0.17022, 0.120711, 0.123601, -0.984963, -0.587123, 0.808958, 0.0295604, -44.7686, -1.19549, 6.90495)
 
 [node name="murinho vegetal" parent="." instance=ExtResource("6_1wl7q")]
-transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, 0.375, 5, 0.25, -18.5)
+transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, 0.375, 5, -0.0641522, -18.5)
 
 [node name="murinho vegetal2" parent="." instance=ExtResource("6_1wl7q")]
-transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, 0.375, 36.6623, 0.25, -18.5)
+transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, 0.375, 36.6623, -0.280204, -18.5)
 
 [node name="murinho vegetal4" parent="." instance=ExtResource("6_1wl7q")]
-transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, 0.375, -28.5007, 0.25, 1.28683)
+transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, 0.375, -28.5007, -0.0314722, 1.28683)
 
 [node name="luzes vermelhas" type="Node3D" parent="."]
 
@@ -183,7 +183,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.5792, 3.42276, -8.20291)
 [node name="Luz4" parent="luzes azuis" instance=ExtResource("15_kagbj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.4223, -0.075016, 23.0645)
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -38.3242, 5.32932, 8.13068)
-light_energy = 5.8
-omni_range = 32.875
+[node name="Decals" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.059, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.235628, 0.0427308, 0.071787, 0, -0.214823, 0.127872, 0.0835422, -0.120521, -0.202473, -35.7838, 9.17755, -6.63005)
+light_color = Color(0.960784, 0.607843, 0.501961, 1)
+light_energy = 8.645
+light_indirect_energy = 2.76
+light_volumetric_fog_energy = 9.16
+shadow_enabled = true
+shadow_opacity = 0.53
+spot_range = 98.0
+spot_attenuation = 0.594603
+spot_angle = 26.9858
