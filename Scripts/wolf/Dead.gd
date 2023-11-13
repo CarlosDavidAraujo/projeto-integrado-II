@@ -1,7 +1,7 @@
 extends State
 
 @export var wolf: Wolf
-@onready var animation_player = $"../../espirito_02/AnimationPlayer"
+@onready var animation_player = $"../../Pivot/AnimationPlayer"
 
 func enter():
 	wolf.velocity = Vector3.ZERO

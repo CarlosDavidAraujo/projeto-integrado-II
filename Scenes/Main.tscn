@@ -1,50 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://qq1mn71fbpoa"]
+[gd_scene load_steps=4 format=3 uid="uid://brgdy6q2oahyk"]
 
-[ext_resource type="PackedScene" uid="uid://cmp4lebu2ekn1" path="res://Scenes/Player.tscn" id="1_hb7re"]
-[ext_resource type="Script" path="res://Scripts/interface/EnemyLifeBar.gd" id="4_2sdt5"]
-[ext_resource type="PackedScene" uid="uid://cap7r5gvxah3x" path="res://Scenes/Wolf.tscn" id="4_je7xd"]
-[ext_resource type="Script" path="res://Scripts/interface/PlayerHealthBar.gd" id="5_ekmag"]
-[ext_resource type="PackedScene" uid="uid://cqxdr2yhulmfl" path="res://Scenes/bg.tscn" id="5_xttaf"]
-[ext_resource type="PackedScene" uid="uid://bemeqvlwie6qe" path="res://Assets/Modelos nossos/Espirito/modelo_fiel_espirito.gltf" id="6_cqtfg"]
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_rhkik"]
+[ext_resource type="PackedScene" uid="uid://dpwbgd3gvtfle" path="res://Scenes/pause_menu.tscn" id="2_wggiv"]
+[ext_resource type="PackedScene" uid="uid://qq1mn71fbpoa" path="res://Scenes/Level1.tscn" id="3_dfhhp"]
 
 [node name="Main" type="Node"]
+process_mode = 3
+script = ExtResource("1_rhkik")
 
-[node name="Player" parent="." instance=ExtResource("1_hb7re")]
-transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, -148.017, -1.34452, 200.016)
+[node name="PauseMenu" parent="." node_paths=PackedStringArray("game_manager") instance=ExtResource("2_wggiv")]
+game_manager = NodePath("..")
 
-[node name="Wolf" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_je7xd")]
-transform = Transform3D(-0.0866314, 0, -3.99906, 0, 4, 0, 3.99906, 0, -0.0866314, 42.566, 2, -0.907)
-player = NodePath("../Player")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="EnemyLifeBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("enemy")]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -221.5
-offset_top = 27.0
-offset_right = 221.5
-offset_bottom = 54.0
-grow_horizontal = 2
-value = 100.0
-script = ExtResource("4_2sdt5")
-enemy = NodePath("../../Wolf")
-
-[node name="PlayerHealthBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = -48.0
-offset_right = 211.0
-offset_bottom = -21.0
-grow_vertical = 0
-script = ExtResource("5_ekmag")
-player = NodePath("../../Player")
-
-[node name="bg" parent="." instance=ExtResource("5_xttaf")]
-transform = Transform3D(2.82843, 0, 2.82843, 0, 4, 0, -2.82843, 0, 2.82843, -63.8106, -1.07199, 74.0839)
-
-[node name="modelo_fiel_espirito" parent="." instance=ExtResource("6_cqtfg")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 60, 0, -24)
+[node name="Level1" parent="." instance=ExtResource("3_dfhhp")]

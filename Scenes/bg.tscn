@@ -121,15 +121,23 @@ transform = Transform3D(-0.499509, 0, -0.0221584, 0, 0.5, 0, 0.0221584, 0, -0.49
 
 [node name="rock_small" parent="." instance=ExtResource("17_di0sp")]
 transform = Transform3D(-0.0150354, 0.992332, 0.122684, 0.120711, 0.123601, -0.984963, -0.992574, 0, -0.121644, 21.9273, -3.53354, 25.2765)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_small3" parent="." instance=ExtResource("17_di0sp")]
 transform = Transform3D(-0.121433, 0.0588882, 0.990851, 0.00716342, 0.998265, -0.0584509, -0.992574, -1.84508e-09, -0.121644, -16.2926, 1.69716, -19.6725)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_small4" parent="." instance=ExtResource("17_di0sp")]
 transform = Transform3D(0.162564, -0.0588373, -0.984942, 0.00716342, 0.998265, -0.0584509, 0.986672, 0.00244647, 0.162703, 56.0396, 3.34433, -20.87)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_small2" parent="." instance=ExtResource("17_di0sp")]
 transform = Transform3D(0.800447, 0.574726, 0.17022, 0.120711, 0.123601, -0.984963, -0.587123, 0.808958, 0.0295604, -44.7686, -1.19549, 6.90495)
+collision_layer = 4
+collision_mask = 0
 
 [node name="murinho vegetal" parent="." instance=ExtResource("6_1wl7q")]
 transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, 0.375, 5, -0.0641522, -18.5)

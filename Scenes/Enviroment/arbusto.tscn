@@ -159,31 +159,29 @@ shadow_mesh = SubResource("ArrayMesh_86hht")
 height = 1.28674
 radius = 0.845259
 
-[node name="arbusto_proj2" type="Node3D"]
+[node name="arbusto_proj2" type="StaticBody3D"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="folhas medias_012" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="folhas medias_012" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.602313, 0.336418, -0.37788, -0.272428, 0.710724, 0.198511, 0.426326, -0.0211296, 0.660721, 0.146182, 0.749542, -0.532645)
 mesh = SubResource("ArrayMesh_oiem5")
 skeleton = NodePath("")
 
-[node name="folhas claras_001" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="folhas claras_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.522582, -0.27153, 0.521471, 0.19807, 0.738216, 0.185896, -0.55356, 0.00780812, 0.558805, 0.274659, 0.981575, -0.494722)
 mesh = SubResource("ArrayMesh_ug074")
 skeleton = NodePath("")
 
-[node name="folhas escuras_006" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="folhas escuras_006" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.305419, 0.0378232, 0.723906, -0.410466, 0.656493, 0.138877, -0.597485, -0.43167, 0.274636, -0.160443, 0.147304, -0.589105)
 mesh = SubResource("ArrayMesh_3fr07")
 skeleton = NodePath("")
 
-[node name="folhas medias_001" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="folhas medias_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.543483, -0.0731464, -0.56394, -0.321194, 0.683212, 0.220926, 0.469268, 0.382915, -0.501912, 0.444173, 0.710405, 0.257944)
 mesh = SubResource("ArrayMesh_56lkq")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0636713, 0.548286, 0)
 shape = SubResource("CylinderShape3D_1wdpa")
