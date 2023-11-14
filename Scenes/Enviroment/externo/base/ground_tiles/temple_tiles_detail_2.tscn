@@ -40,7 +40,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qw6l5")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vph64"]
-size = Vector3(3.23471, 0.304957, 3.34888)
+size = Vector3(3.23471, 0.130301, 3.34888)
 
 [node name="temple_tiles_detail_2" type="StaticBody3D"]
 collision_layer = 4

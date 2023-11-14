@@ -10,10 +10,10 @@
 process_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_phjtd")]
-transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, -148.017, -1.34452, 200.016)
+transform = Transform3D(-1.74846e-07, 0.118665, 3.99824, 0, 3.99824, -0.118665, -4, -5.18701e-09, -1.74769e-07, -147.844, -1.34452, 197.155)
 
 [node name="Wolf" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_irwla")]
-transform = Transform3D(-0.0866314, 0, -3.99906, 0, 4, 0, 3.99906, 0, -0.0866314, 42.566, 2, -0.907)
+transform = Transform3D(-3.22615, 0, 2.36473, 0, 4, 0, -2.36473, 0, -3.22615, 66.566, 2, -35.907)
 player = NodePath("../Player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -45,4 +45,3 @@ player = NodePath("../../Player")
 
 [node name="bg" parent="." instance=ExtResource("5_0wgpy")]
 transform = Transform3D(2.82843, 0, 2.82843, 0, 4, 0, -2.82843, 0, 2.82843, -63.8106, -1.07199, 74.0839)
-visible = false

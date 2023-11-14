@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c7xl6h61vcfql"]
+[gd_scene load_steps=13 format=3 uid="uid://c7xl6h61vcfql"]
 
 [ext_resource type="PackedScene" uid="uid://bmkr6g26ix3ow" path="res://Scenes/Enviroment/externo/base/rocks/rock_big.tscn" id="1_uhkvw"]
 [ext_resource type="PackedScene" uid="uid://b8hwrwq5s346g" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_2.tscn" id="2_xltr1"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://dvutajdsd780m" path="res://Scenes/Enviroment/externo/base/temple_pillars/temple_door.tscn" id="10_bau5y"]
 [ext_resource type="PackedScene" uid="uid://7ffcufm7droq" path="res://Scenes/Enviroment/externo/base/stairs/temple_stairs_1.tscn" id="11_q2otl"]
 [ext_resource type="PackedScene" uid="uid://dlqgqkvrdxx05" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_1.tscn" id="12_862sa"]
-[ext_resource type="PackedScene" uid="uid://b2fjtq05sd7d3" path="res://Scenes/Enviroment/luz_azul.tscn" id="13_oftw6"]
 
 [node name="Saida" type="Node3D"]
 
@@ -108,5 +107,11 @@ transform = Transform3D(0.387413, 0, 0.0995572, 0, 0.4, 0, -0.0995572, 0, 0.3874
 [node name="luzes" type="Node3D" parent="."]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 6.17087, 0, -15.2917)
 
-[node name="Luz" parent="." instance=ExtResource("13_oftw6")]
-transform = Transform3D(-0.778202, 0, 0.00366762, 0, 0.77821, 0, -0.00366762, 0, -0.778202, 1.7522, 5.66134, -0.900198)
+[node name="OmniLight3D" type="OmniLight3D" parent="luzes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.431318, 5.26845, 15.0187)
+light_color = Color(0, 0.529412, 0.901961, 1)
+light_energy = 16.0
+shadow_enabled = true
+shadow_bias = 7.7
+omni_range = 16.021
+omni_shadow_mode = 0
