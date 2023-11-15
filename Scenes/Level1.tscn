@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://qq1mn71fbpoa"]
+[gd_scene load_steps=7 format=3 uid="uid://qq1mn71fbpoa"]
 
 [ext_resource type="PackedScene" uid="uid://cmp4lebu2ekn1" path="res://Scenes/Player.tscn" id="1_phjtd"]
 [ext_resource type="PackedScene" uid="uid://cap7r5gvxah3x" path="res://Scenes/Wolf.tscn" id="2_irwla"]
 [ext_resource type="Script" path="res://Scripts/interface/EnemyLifeBar.gd" id="3_dys61"]
 [ext_resource type="Script" path="res://Scripts/interface/PlayerHealthBar.gd" id="4_gmw6g"]
+[ext_resource type="PackedScene" uid="uid://dpwbgd3gvtfle" path="res://Scenes/pause_menu.tscn" id="4_ictlg"]
 [ext_resource type="PackedScene" uid="uid://cqxdr2yhulmfl" path="res://Scenes/bg.tscn" id="5_0wgpy"]
 
 [node name="Level1" type="Node"]
@@ -38,6 +39,8 @@ offset_bottom = -21.0
 grow_vertical = 0
 script = ExtResource("4_gmw6g")
 player = NodePath("../../Player")
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_ictlg")]
 
 [node name="Wolf" parent="." instance=ExtResource("2_irwla")]
 transform = Transform3D(-3.22615, 0, 2.36473, 0, 4, 0, -2.36473, 0, -3.22615, 66.566, -27.5642, -35.907)

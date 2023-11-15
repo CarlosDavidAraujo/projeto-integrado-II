@@ -1,21 +1,22 @@
 extends Control
 
-@export var game_manager: GameManager
+var _is_paused:bool = false:
+	set = set_paused
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	hide()
-	game_manager.connect("toogle_game_paused", _on_game_manager_toogle_game_paused)
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause"):
+		_is_paused = !_is_paused
 
-func _on_game_manager_toogle_game_paused(is_paused: bool):
-	if is_paused:
-		show()
-	else:
-		hide()
+func set_paused(value:bool) -> void:
+	_is_paused = value
+	get_tree().paused = _is_paused
+	visible = _is_paused
 
-func _on_resume_button_pressed():
-	game_manager.game_paused = false
 
-func _on_exit_button_pressed():
+
+func _on_resume_button_pressed() -> void:
+	_is_paused = false
+	
+func _on_exit_button_pressed() -> void:
 	get_tree().quit()
 
