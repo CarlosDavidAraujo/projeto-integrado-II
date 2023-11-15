@@ -2,7 +2,7 @@ extends CharacterBody3D
 class_name Wolf
 signal healthChanged
 
-const SPEED = 20
+const SPEED = 50
 
 var target = null
 @export var targetPath : NodePath
@@ -24,7 +24,7 @@ func _chase(delta):
 	nav_agent.set_target_position(target.global_transform.origin)
 	var next_nav_point = nav_agent.get_next_path_position()
 	velocity = (next_nav_point - global_transform.origin).normalized() * SPEED
-	look_at(Vector3(target.global_position.x,target.global_position.y,target.global_position.z), Vector3.UP)
+	look_at(Vector3(target.global_position.x,global_position.y,target.global_position.z), Vector3.UP)
 	move_and_slide()
 
 func _is_target_in_range():

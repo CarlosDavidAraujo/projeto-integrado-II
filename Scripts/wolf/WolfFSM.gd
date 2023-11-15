@@ -13,6 +13,8 @@ func _state_logic(delta):
 		parent._chase(delta)
 
 func _get_transition(delta):
+	if parent.currentHealth <= 0:
+		return states.dead
 	match state:
 		states.idle:
 			if(parent._is_target_in_range()):
