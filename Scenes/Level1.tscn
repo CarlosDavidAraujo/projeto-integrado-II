@@ -1,12 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://qq1mn71fbpoa"]
+[gd_scene load_steps=6 format=3 uid="uid://qq1mn71fbpoa"]
 
 [ext_resource type="PackedScene" uid="uid://cmp4lebu2ekn1" path="res://Scenes/Player.tscn" id="1_phjtd"]
 [ext_resource type="PackedScene" uid="uid://cap7r5gvxah3x" path="res://Scenes/Wolf.tscn" id="2_irwla"]
 [ext_resource type="Script" path="res://Scripts/interface/EnemyLifeBar.gd" id="3_dys61"]
 [ext_resource type="Script" path="res://Scripts/interface/PlayerHealthBar.gd" id="4_gmw6g"]
 [ext_resource type="PackedScene" uid="uid://cqxdr2yhulmfl" path="res://Scenes/bg.tscn" id="5_0wgpy"]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_opn0l"]
 
 [node name="Level1" type="Node"]
 process_mode = 1
@@ -41,15 +39,10 @@ grow_vertical = 0
 script = ExtResource("4_gmw6g")
 player = NodePath("../../Player")
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -29.5642, 0)
-navigation_mesh = SubResource("NavigationMesh_opn0l")
-use_edge_connections = false
-
-[node name="bg" parent="NavigationRegion3D" instance=ExtResource("5_0wgpy")]
-transform = Transform3D(2.82843, 0, 2.82843, 0, 4, 0, -2.82843, 0, 2.82843, -63.8106, -1.07199, 74.0839)
-
 [node name="Wolf" parent="." instance=ExtResource("2_irwla")]
 transform = Transform3D(-3.22615, 0, 2.36473, 0, 4, 0, -2.36473, 0, -3.22615, 66.566, -27.5642, -35.907)
 targetPath = NodePath("../Player")
 attack_range = 13.0
+
+[node name="bg" parent="." instance=ExtResource("5_0wgpy")]
+transform = Transform3D(2.82843, 0, 2.82843, 0, 4, 0, -2.82843, 0, 2.82843, -63.8106, -30.6362, 74.0839)
