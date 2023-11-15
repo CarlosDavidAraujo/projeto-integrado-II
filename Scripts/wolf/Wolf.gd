@@ -7,15 +7,17 @@ const SPEED = 50
 var target = null
 @export var targetPath : NodePath
 @export var attack_range: float
+@export var player: Player
 
 func _ready():
 	target = get_node(targetPath)
 	healthChanged.emit()
 
-@export var maxHealth = 30
+@export var maxHealth: float = 5000
 @onready var currentHealth: int = maxHealth
 @onready var wolf_anim = $Pivot/AnimationPlayer
 @onready var nav_agent = $NavigationAgent3D
+@onready var damege = $damege
 
 var isDead = false
 
@@ -34,8 +36,11 @@ func _is_moving():
 	return !(velocity.x == 0 && velocity.z == 0)
 
 func hurt():
-	currentHealth -= 3
-	if currentHealth <= 0:
+	if currentHealth > 0:
+		damege.play()
+		currentHealth -= player.damage
+	else:
+		currentHealth = 0
 		isDead = true
 	healthChanged.emit()
 

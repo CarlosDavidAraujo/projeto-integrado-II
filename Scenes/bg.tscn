@@ -286,53 +286,87 @@ transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, 0.375, -28.5007, -0.0314
 
 [node name="rock_small5" parent="NavigationRegion3D/pedrinhas" instance=ExtResource("17_di0sp")]
 transform = Transform3D(0.152559, 0, -0.0750054, -0.0749963, 0.00265245, -0.15254, 0.00117028, 0.169979, 0.00238032, 26.8466, 0.180256, 2.9604)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_small6" parent="NavigationRegion3D/pedrinhas" instance=ExtResource("17_di0sp")]
 transform = Transform3D(0.0334687, -0.0794185, 0.146535, -0.16483, 0.00639351, 0.0411124, -0.0247174, -0.150173, -0.0757445, 12.9566, 0.180258, 13.9813)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_small7" parent="NavigationRegion3D/pedrinhas" instance=ExtResource("17_di0sp")]
 transform = Transform3D(-0.218798, -0.134888, -0.0644799, 0.0595767, 0.0261613, -0.256887, 0.137125, -0.226596, 0.00872517, 4.87779, 0.180258, 10.1971)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_small9" parent="NavigationRegion3D/pedrinhas" instance=ExtResource("17_di0sp")]
-transform = Transform3D(-0.178744, 0.190591, 0.0441668, -0.0632502, 0.000316473, -0.257341, -0.185135, -0.18412, 0.0452767, 4.89357, 0.180258, -5.17734)
+transform = Transform3D(-0.178744, 0.190591, 0.0441668, -0.0632502, 0.000316473, -0.257341, -0.185135, -0.18412, 0.0452767, 4.88413, 0.271982, -5.17734)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_small10" parent="NavigationRegion3D/pedrinhas" instance=ExtResource("17_di0sp")]
 transform = Transform3D(-0.0341234, 0.262649, 0.00870998, -0.0632502, 0.000316472, -0.257341, -0.255069, -0.035216, 0.0626484, 4.89357, 0.180258, -11.7336)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_small11" parent="NavigationRegion3D/pedrinhas" instance=ExtResource("17_di0sp")]
 transform = Transform3D(-0.0341234, 0.262649, 0.00870998, -0.0632502, 0.000316472, -0.257341, -0.255069, -0.035216, 0.0626484, 15.7936, 0.180258, -4.92677)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_small12" parent="NavigationRegion3D/pedrinhas" instance=ExtResource("17_di0sp")]
 transform = Transform3D(0.162634, 0.205421, -0.0397201, -0.0632502, 0.000316472, -0.257341, -0.199436, 0.167414, 0.049224, 26.8947, 0.180258, -4.92677)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_small13" parent="NavigationRegion3D/pedrinhas" instance=ExtResource("17_di0sp")]
 transform = Transform3D(-0.176089, 0.193193, 0.0435175, -0.0632502, 0.000316472, -0.257341, -0.187662, -0.181387, 0.0459011, 24.9619, 0.180258, 10.907)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_small8" parent="NavigationRegion3D/pedrinhas" instance=ExtResource("17_di0sp")]
 transform = Transform3D(-0.000301588, -0.265, -0.00025176, -0.0632502, 0.00031647, -0.257341, 0.257341, -0.000232773, -0.0632505, 1.0337, 0.180258, 16.3633)
+collision_layer = 4
+collision_mask = 0
 
 [node name="rock_small15" parent="NavigationRegion3D/pedrinhas" instance=ExtResource("17_di0sp")]
 transform = Transform3D(-0.000301588, -0.265, -0.00025176, -0.0632502, 0.00031647, -0.257341, 0.257341, -0.000232773, -0.0632505, 30.6652, 0.180258, 16.3633)
+collision_layer = 4
+collision_mask = 0
 
 [node name="arbustos soltos" type="Node3D" parent="NavigationRegion3D"]
 
 [node name="arbusto_proj2" parent="NavigationRegion3D/arbustos soltos" instance=ExtResource("10_amc1n")]
 transform = Transform3D(-0.225523, 0, -0.87645, 0, 0.905, 0, 0.87645, 0, -0.225523, 3.23296, 0, 1.2836)
+collision_layer = 0
+collision_mask = 0
 
 [node name="arbusto_proj8" parent="NavigationRegion3D/arbustos soltos" instance=ExtResource("10_amc1n")]
 transform = Transform3D(-0.637234, 0, 0.642618, 0, 0.905, 0, -0.642618, 0, -0.637234, 18.8612, 0, 12.9067)
+collision_layer = 0
+collision_mask = 0
 
 [node name="arbusto_proj6" parent="NavigationRegion3D/arbustos soltos" instance=ExtResource("10_amc1n")]
 transform = Transform3D(-0.535632, 0, -0.729468, 0, 0.905, 0, 0.729468, 0, -0.535632, 27.3254, 0, -2.55417)
+collision_layer = 0
+collision_mask = 0
 
 [node name="arbusto_proj7" parent="NavigationRegion3D/arbustos soltos" instance=ExtResource("10_amc1n")]
 transform = Transform3D(0.474853, 0, -0.770415, 0, 0.905, 0, 0.770415, 0, 0.474853, 7.5796, 0, -10.806)
+collision_layer = 0
+collision_mask = 0
 
 [node name="arbusto_proj3" parent="NavigationRegion3D/arbustos soltos" instance=ExtResource("10_amc1n")]
 transform = Transform3D(0.660596, 0, -0.231545, 0, 0.7, 0, 0.231545, 0, 0.660596, 4.17982, 0, 2.46757)
+collision_layer = 0
+collision_mask = 0
 
 [node name="arbusto_proj4" parent="NavigationRegion3D/arbustos soltos" instance=ExtResource("10_amc1n")]
 transform = Transform3D(-0.418177, 0, 0.802592, 0, 0.905, 0, -0.802592, 0, -0.418177, 31.5505, 0, -11.993)
+collision_layer = 0
+collision_mask = 0
 
 [node name="arbusto_proj5" parent="NavigationRegion3D/arbustos soltos" instance=ExtResource("10_amc1n")]
 transform = Transform3D(-0.166546, 0, 0.679899, 0, 0.7, 0, -0.679899, 0, -0.166546, 32.4973, 0, -10.809)
+collision_layer = 0
+collision_mask = 0

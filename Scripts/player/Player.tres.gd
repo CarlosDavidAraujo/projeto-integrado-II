@@ -1,12 +1,11 @@
 extends CharacterBody3D
 class_name Player
-
 signal HealthChanged
 
-@export var speed: float  = 30
-@export var max_health: float = 50
-@export var damage: float = 5
-@export var fall_acceleration = 75
+@export var speed: float = 30
+@export var max_health: float = 1000
+@export var damage: float = 200
+@export var fall_acceleration: float
 @onready var animation_player = $Pivot/AnimationPlayer
 @onready var hitbox = $Pivot/rig/Skeleton3D/WeaponAtachment/Hitbox
 @onready var state_machine: StateMachine = $StateMachine

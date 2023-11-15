@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://3hl6fpqn1fcf"]
+[gd_scene load_steps=3 format=3 uid="uid://3hl6fpqn1fcf"]
 
 [ext_resource type="Script" path="res://Scripts/tela inicial/menu_inicial.gd" id="1_ngfqw"]
+[ext_resource type="FontFile" uid="uid://3cb7xc2vf4u4" path="res://Assets/fonts/Kanit-Black.ttf" id="2_r8nfg"]
 
 [node name="Menu_inicial" type="Control"]
 layout_mode = 3
@@ -30,14 +31,17 @@ layout_mode = 2
 
 [node name="Jogar" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r8nfg")
 text = "Jogar"
 
 [node name="Controles" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r8nfg")
 text = "Controles"
 
 [node name="Sair" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r8nfg")
 text = "Sair"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
