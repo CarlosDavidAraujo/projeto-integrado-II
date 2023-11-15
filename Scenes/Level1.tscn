@@ -27,7 +27,7 @@ offset_bottom = 54.0
 grow_horizontal = 2
 value = 100.0
 script = ExtResource("3_dys61")
-enemy = NodePath("../../NavigationRegion3D/Wolf")
+enemy = NodePath("../../Wolf")
 
 [node name="PlayerHealthBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
 anchors_preset = 2
@@ -46,9 +46,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -29.5642, 0)
 navigation_mesh = SubResource("NavigationMesh_opn0l")
 use_edge_connections = false
 
-[node name="Wolf" parent="NavigationRegion3D" instance=ExtResource("2_irwla")]
-transform = Transform3D(-3.22615, 0, 2.36473, 0, 4, 0, -2.36473, 0, -3.22615, 66.566, 2, -35.907)
-targetPath = NodePath("../../Player")
-
 [node name="bg" parent="NavigationRegion3D" instance=ExtResource("5_0wgpy")]
 transform = Transform3D(2.82843, 0, 2.82843, 0, 4, 0, -2.82843, 0, 2.82843, -63.8106, -1.07199, 74.0839)
+
+[node name="Wolf" parent="." instance=ExtResource("2_irwla")]
+transform = Transform3D(-3.22615, 0, 2.36473, 0, 4, 0, -2.36473, 0, -3.22615, 66.566, -27.5642, -35.907)
+targetPath = NodePath("../Player")
+attack_range = 13.0
