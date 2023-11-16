@@ -25727,7 +25727,7 @@ pitch_scale = 1.54
 
 [node name="damege" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_aqsp1")
-volume_db = 1.548
+volume_db = 8.0
 pitch_scale = 1.25
 
 [node name="voice_heavy_attack" type="AudioStreamPlayer2D" parent="."]
@@ -25736,11 +25736,11 @@ volume_db = 8.0
 
 [node name="voice_light_attack_01" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_h5lmj")
-volume_db = 3.0
+volume_db = 5.0
 
 [node name="voice_light_attack_02" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_3vnhr")
-volume_db = 3.0
+volume_db = 5.0
 
 [connection signal="body_entered" from="Pivot/rig/Skeleton3D/WeaponAtachment/Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="animation_finished" from="Pivot/AnimationPlayer" to="AttackStateMachine/Attack" method="_on_animation_player_animation_finished"]
