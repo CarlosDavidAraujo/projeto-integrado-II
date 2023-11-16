@@ -8,3 +8,5 @@ process_mode = 1
 script = ExtResource("1_rhkik")
 
 [node name="Menu_inicial" parent="." instance=ExtResource("3_30nbm")]
+offset_top = 1.0
+offset_bottom = 1.0
