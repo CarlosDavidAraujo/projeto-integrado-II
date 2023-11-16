@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Scenes/TRIGGER.gd" id="5_l86rp"]
 [ext_resource type="AudioStream" uid="uid://bcx02grvy6a4c" path="res://Assets/Audio/Sugestões/fight.ogg" id="6_eduvd"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_y6uae"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_7bfnc"]
 
 [node name="Level1" type="Node"]
 process_mode = 1
@@ -29,17 +29,17 @@ player = NodePath("../Player")
 [node name="bg" parent="." instance=ExtResource("5_0wgpy")]
 transform = Transform3D(2.82843, 0, 2.82843, 0, 4, 0, -2.82843, 0, 2.82843, -63.811, 0, 74.084)
 
-[node name="TRIGGER" type="Node" parent="."]
+[node name="StartTrigger" type="Node" parent="."]
 script = ExtResource("5_l86rp")
 
-[node name="Area3D" type="Area3D" parent="TRIGGER"]
-transform = Transform3D(0.994028, 0, 0.109127, 0, 1, 0, -0.109127, 0, 0.994028, -145.656, -56.4836, 175.473)
+[node name="Area3D" type="Area3D" parent="StartTrigger"]
+transform = Transform3D(38, 0, 0, 0, 38, 0, 0, 0, 38, -88.9197, 3.5, 139.974)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TRIGGER/Area3D"]
-transform = Transform3D(-30.7831, 0, 0.788011, 0, 50, 0, -39.4005, 0, -0.615661, 78, 52, -41)
-shape = SubResource("BoxShape3D_y6uae")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StartTrigger/Area3D"]
+transform = Transform3D(0.696952, 0, -0.717117, 0, 1, 0, 0.717117, 0, 0.696952, 0, 0, 0)
+shape = SubResource("BoxShape3D_7bfnc")
 
-[node name="Song" type="AudioStreamPlayer" parent="TRIGGER"]
+[node name="Song" type="AudioStreamPlayer" parent="StartTrigger"]
 stream = ExtResource("6_eduvd")
 
-[connection signal="body_entered" from="TRIGGER/Area3D" to="TRIGGER" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="StartTrigger/Area3D" to="StartTrigger" method="_on_area_3d_body_exited"]

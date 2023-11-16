@@ -23,11 +23,16 @@ func _ready():
 
 var is_cd_able = true
 
+var can_dash = true
+
 var init = false
 var isDead = false
 
 func start():
 	init = true
+
+func stop():
+	init = false
 
 func _chase(delta):
 	__move(delta,1)
@@ -36,7 +41,7 @@ func _dodge(delta):
 	__move(delta,-1)
 
 func _dash(delta):
-	__move(delta,10)
+	__move(delta,5)
 
 func __move(delta, mod):
 	velocity = Vector3.ZERO

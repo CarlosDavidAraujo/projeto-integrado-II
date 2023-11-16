@@ -1,7 +1,5 @@
 extends "res://Scripts/_StateMachine.gd"
 
-@onready var debug = $SubViewport/Label
-
 func _ready():
 	add_state("idle")
 	add_state("run")
@@ -12,22 +10,21 @@ func _ready():
 	call_deferred("set_state", states.idle)
 
 func _state_logic(delta):
-	debug.text = "State: {0}".format(state)
-	
-	if [states.run].has(state):
-		parent._chase(delta)
-	if [states.dash].has(state):
-		parent._dash(delta)
-	if [states.dodge].has(state):
-		parent._dodge(delta)
-		
-	if parent._is_target_too_far():
-		print("Too far")
-		if parent.cd.is_stopped():
-			parent._cd_start(5)
-	else:
-		print("Close enough")
-		parent._cd_stop()
+	if parent.init && !parent.isDead:
+		if [states.run].has(state):
+			parent._chase(delta)
+		if [states.dash].has(state) && parent.can_dash:
+			parent._dash(delta)
+			if parent._is_target_in_range():
+				parent.can_dash = false
+		if [states.dodge].has(state):
+			parent._dodge(delta)
+			
+		if parent._is_target_too_far() && parent.is_cd_able:
+			if parent.cd.is_stopped():
+				parent._cd_start(5)
+		else:
+			parent._cd_stop()
 
 func _get_transition(delta):
 	if !parent.init:
@@ -70,12 +67,16 @@ func _exit_state(old_state, new_state):
 
 func _on_animation_player_animation_finished(anim_name):
 	if ["dash"].has(anim_name):
-		set_state(states.dodge)
+		if parent.is_cd_able:
+			set_state(states.dodge)
+		else:
+			parent.is_cd_able = true
+			parent.can_dash = true
+			set_state(states.hit)
 	if ["pulo"].has(anim_name):
-		set_state(states.idle)
+		set_state(states.run)
 
 func _on_cd_timeout():
-	print("ATTACK")
 	if parent._is_target_too_far():
-		print("NOW!")
-		set_state("dash")
+		parent.is_cd_able = false
+		set_state(states.dash)
