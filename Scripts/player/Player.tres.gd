@@ -51,6 +51,7 @@ func hurt(dmg: float):
 	damege.play()
 	if current_health <= 0:
 		isDead = true
+		get_tree().change_scene_to_file("res://Scenes/menu_inicial.tscn")
 	HealthChanged.emit()
 
 func look_at_mouse_position():

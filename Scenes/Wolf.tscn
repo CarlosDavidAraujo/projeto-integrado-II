@@ -14182,7 +14182,7 @@ theme_override_font_sizes/font_size = 25
 text = "Theoz, O Lobo"
 
 [node name="Hitbox" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2.8)
+transform = Transform3D(2.64912, 0, 0, 0, 1, 0, 0, 0, 3.26841, 0, 1, -3.83642)
 collision_layer = 2
 monitoring = false
 monitorable = false

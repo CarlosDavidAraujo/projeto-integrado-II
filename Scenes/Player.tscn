@@ -25687,7 +25687,6 @@ grow_vertical = 0
 scale = Vector2(0.6, 0.6)
 max_value = 1000.0
 value = 1000.0
-fill_mode = 1
 texture_under = ExtResource("9_12ik4")
 texture_progress = ExtResource("16_o7883")
 script = ExtResource("17_iateq")

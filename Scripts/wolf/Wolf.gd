@@ -81,4 +81,4 @@ func hurt():
 func _on_hitbox_body_entered(body):
 	if body.is_in_group("player"):
 		if body.has_method("hurt"):
-			body.hurt(20)
+			body.hurt(100)
