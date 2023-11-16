@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://qq1mn71fbpoa"]
+[gd_scene load_steps=8 format=3 uid="uid://qq1mn71fbpoa"]
 
 [ext_resource type="PackedScene" uid="uid://cmp4lebu2ekn1" path="res://Scenes/Player.tscn" id="1_phjtd"]
 [ext_resource type="PackedScene" uid="uid://cap7r5gvxah3x" path="res://Scenes/Wolf.tscn" id="2_irwla"]
 [ext_resource type="PackedScene" uid="uid://dpwbgd3gvtfle" path="res://Scenes/pause_menu.tscn" id="4_ictlg"]
 [ext_resource type="PackedScene" uid="uid://cqxdr2yhulmfl" path="res://Scenes/bg.tscn" id="5_0wgpy"]
+[ext_resource type="Script" path="res://Scenes/TRIGGER.gd" id="5_l86rp"]
+[ext_resource type="AudioStream" uid="uid://bcx02grvy6a4c" path="res://Assets/Audio/Sugestões/fight.ogg" id="6_eduvd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y6uae"]
 
 [node name="Level1" type="Node"]
 process_mode = 1
@@ -19,7 +23,23 @@ transform = Transform3D(-1.74846e-07, 0.118665, 3.99824, 0, 3.99824, -0.118665, 
 transform = Transform3D(-3.22615, 0, 2.36473, 0, 4, 0, -2.36473, 0, -3.22615, 66.566, 0, -35.907)
 targetPath = NodePath("../Player")
 attack_range = 13.0
+too_far = 30.0
 player = NodePath("../Player")
 
 [node name="bg" parent="." instance=ExtResource("5_0wgpy")]
 transform = Transform3D(2.82843, 0, 2.82843, 0, 4, 0, -2.82843, 0, 2.82843, -63.811, 0, 74.084)
+
+[node name="TRIGGER" type="Node" parent="."]
+script = ExtResource("5_l86rp")
+
+[node name="Area3D" type="Area3D" parent="TRIGGER"]
+transform = Transform3D(0.994028, 0, 0.109127, 0, 1, 0, -0.109127, 0, 0.994028, -145.656, -56.4836, 175.473)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TRIGGER/Area3D"]
+transform = Transform3D(-30.7831, 0, 0.788011, 0, 50, 0, -39.4005, 0, -0.615661, 78, 52, -41)
+shape = SubResource("BoxShape3D_y6uae")
+
+[node name="Song" type="AudioStreamPlayer" parent="TRIGGER"]
+stream = ExtResource("6_eduvd")
+
+[connection signal="body_entered" from="TRIGGER/Area3D" to="TRIGGER" method="_on_area_3d_body_entered"]
