@@ -1,4 +1,4 @@
-sextends Node
+extends Node
 class_name GameManager
 
 

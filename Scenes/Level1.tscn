@@ -14,6 +14,7 @@ process_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_phjtd")]
 transform = Transform3D(-1.74846e-07, 0.118665, 3.99824, 0, 3.99824, -0.118665, -4, -5.18701e-09, -1.74769e-07, -147.844, 0, 197.155)
+fall_acceleration = 75.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

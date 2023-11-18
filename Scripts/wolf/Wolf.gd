@@ -2,7 +2,7 @@ extends CharacterBody3D
 class_name Wolf
 signal healthChanged
 
-const SPEED = 20
+const SPEED = 40
 
 var target = null
 @export var targetPath : NodePath
@@ -53,7 +53,6 @@ func __move(delta, mod):
 
 func _is_target_in_range():
 	return global_position.distance_to(target.global_position) < attack_range
-
 
 func _is_target_too_far():
 	return global_position.distance_to(target.global_position) > too_far
