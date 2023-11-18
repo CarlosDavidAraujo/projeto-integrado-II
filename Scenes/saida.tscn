@@ -1,0 +1,117 @@
+[gd_scene load_steps=13 format=3 uid="uid://c7xl6h61vcfql"]
+
+[ext_resource type="PackedScene" uid="uid://bmkr6g26ix3ow" path="res://Scenes/Enviroment/externo/base/rocks/rock_big.tscn" id="1_uhkvw"]
+[ext_resource type="PackedScene" uid="uid://b8hwrwq5s346g" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_2.tscn" id="2_xltr1"]
+[ext_resource type="PackedScene" uid="uid://efdytypf3lx8" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_3.tscn" id="3_jq358"]
+[ext_resource type="PackedScene" uid="uid://dc6c0goa8eu1s" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_5.tscn" id="4_v43k4"]
+[ext_resource type="PackedScene" uid="uid://mw3w7v0siqev" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_6.tscn" id="5_6m5wd"]
+[ext_resource type="PackedScene" uid="uid://mqvduda8rw6q" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_7.tscn" id="6_bha6m"]
+[ext_resource type="PackedScene" uid="uid://dc2kquulamku3" path="res://Scenes/Enviroment/externo/base/temple_pillars/templearc_bottom.tscn" id="7_yl4f4"]
+[ext_resource type="PackedScene" uid="uid://bqn01vvlql12f" path="res://Scenes/Enviroment/externo/base/temple_pillars/templearc_top.tscn" id="8_7x0xf"]
+[ext_resource type="PackedScene" uid="uid://oxp303ddd6nh" path="res://Scenes/Enviroment/externo/base/temple_pillars/templearc_side_1.tscn" id="9_hceqy"]
+[ext_resource type="PackedScene" uid="uid://dvutajdsd780m" path="res://Scenes/Enviroment/externo/base/temple_pillars/temple_door.tscn" id="10_bau5y"]
+[ext_resource type="PackedScene" uid="uid://7ffcufm7droq" path="res://Scenes/Enviroment/externo/base/stairs/temple_stairs_1.tscn" id="11_q2otl"]
+[ext_resource type="PackedScene" uid="uid://dlqgqkvrdxx05" path="res://Scenes/Enviroment/externo/base/ground_tiles/temple_tiles_detail_1.tscn" id="12_862sa"]
+
+[node name="Saida" type="Node3D"]
+
+[node name="pedras" type="Node3D" parent="."]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 6.17087, 0, -15.2917)
+
+[node name="rock_big" parent="pedras" instance=ExtResource("1_uhkvw")]
+transform = Transform3D(-0.965502, -0.0621831, -0.255677, 0.0580867, 1.15456, -0.396222, 0.253835, -0.500729, -0.881837, -3.50052, 5.04538, 26.5046)
+collision_layer = 4
+collision_mask = 0
+
+[node name="rock_big3" parent="pedras" instance=ExtResource("1_uhkvw")]
+transform = Transform3D(-0.96363, -0.0239537, -0.266563, 0.0576183, 1.20863, -0.2767, 0.260954, -0.355315, -0.923245, -5.47675, 13.1472, 18.9877)
+collision_layer = 4
+collision_mask = 0
+
+[node name="rock_big2" parent="pedras" instance=ExtResource("1_uhkvw")]
+transform = Transform3D(-0.967135, 0.166512, -0.215912, -6.92061e-08, 1.05297, 0.528127, 0.254264, 0.633354, -0.821257, -6.36061, 10.4856, 8.67342)
+collision_layer = 4
+collision_mask = 0
+
+[node name="templo" type="Node3D" parent="."]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 6.17087, 0, -15.2917)
+
+[node name="temple_tiles_detail_10" parent="templo" instance=ExtResource("2_xltr1")]
+transform = Transform3D(0.387413, 0, 0.0995572, 0, 0.4, 0, -0.0995572, 0, 0.387413, 4.03905, 0.819977, 10.4186)
+collision_layer = 0
+
+[node name="temple_tiles_detail_3" parent="templo" instance=ExtResource("3_jq358")]
+transform = Transform3D(-0.386854, 0, -0.101706, 0, 0.4, 0, 0.101706, 0, -0.386854, 1.10436, 0.819976, 19.4001)
+collision_layer = 0
+collision_mask = 0
+
+[node name="temple_tiles_detail_8" parent="templo" instance=ExtResource("3_jq358")]
+transform = Transform3D(-0.394571, 0, -0.0656814, 0, 0.4, 0, 0.0656814, 0, -0.394571, 2.61865, 0.819976, 19.5178)
+collision_layer = 0
+collision_mask = 0
+
+[node name="temple_tiles_detail_5" parent="templo" instance=ExtResource("4_v43k4")]
+transform = Transform3D(-0.386854, 0, -0.101706, 0, 0.4, 0, 0.101706, 0, -0.386854, -0.610878, 0.819976, 9.70243)
+
+[node name="temple_tiles_detail_6" parent="templo" instance=ExtResource("5_6m5wd")]
+transform = Transform3D(-0.386854, 0, -0.101706, 0, 0.4, 0, 0.101706, 0, -0.386854, 2.15382, 0.819976, 18.1391)
+
+[node name="temple_tiles_detail_7" parent="templo" instance=ExtResource("6_bha6m")]
+transform = Transform3D(-0.367431, 0, -0.158096, 0, 0.4, 0, 0.158096, 0, -0.367431, 2.55218, 0.819976, 8.28425)
+
+[node name="templearc_bottom" parent="templo" instance=ExtResource("7_yl4f4")]
+transform = Transform3D(-0.386854, 0, -0.101706, 0, 0.4, 0, 0.101706, 0, -0.386854, 0.202766, 2.30427, 18.2489)
+
+[node name="templearc_bottom2" parent="templo" instance=ExtResource("7_yl4f4")]
+transform = Transform3D(-0.386854, 0, -0.101706, 0, 0.4, 0, 0.101706, 0, -0.386854, 0.197205, 1.65179, 18.2278)
+
+[node name="templearc_bottom5" parent="templo" instance=ExtResource("7_yl4f4")]
+transform = Transform3D(-0.386854, 0, -0.101706, 0, 0.4, 0, 0.101706, 0, -0.386854, 0.197205, 1.03577, 18.2278)
+
+[node name="templearc_bottom6" parent="templo" instance=ExtResource("7_yl4f4")]
+transform = Transform3D(-0.386854, 0, -0.101706, 0, 0.4, 0, 0.101706, 0, -0.386854, -1.51088, 2.30427, 11.7307)
+
+[node name="templearc_bottom7" parent="templo" instance=ExtResource("7_yl4f4")]
+transform = Transform3D(-0.386854, 0, -0.101706, 0, 0.4, 0, 0.101706, 0, -0.386854, -1.51643, 1.65179, 11.7096)
+
+[node name="templearc_bottom8" parent="templo" instance=ExtResource("7_yl4f4")]
+transform = Transform3D(-0.386854, 0, -0.101706, 0, 0.4, 0, 0.101706, 0, -0.386854, -1.51643, 1.03577, 11.7096)
+
+[node name="templearc_top" parent="templo" instance=ExtResource("8_7x0xf")]
+transform = Transform3D(-0.0981837, 0, 0.387762, 0, 0.4, 0, -0.387762, 0, -0.0981837, -0.486992, 9.69623, 15.0023)
+
+[node name="templearc_side1" parent="templo" instance=ExtResource("9_hceqy")]
+transform = Transform3D(-0.386854, 0, -0.101706, 0, 0.4, 0, 0.101706, 0, -0.386854, 0.145885, 5.12594, 18.2531)
+
+[node name="templearc_side2" parent="templo" instance=ExtResource("9_hceqy")]
+transform = Transform3D(-0.386854, 0, -0.101706, 0, 0.4, 0, 0.101706, 0, -0.386854, -1.28991, 5.12594, 11.7714)
+
+[node name="temple_door" parent="templo" instance=ExtResource("10_bau5y")]
+transform = Transform3D(-0.0918635, 0, 0.389309, 0, 0.4, 0, -0.389309, 0, -0.0918635, -0.280319, 5.64631, 14.972)
+
+[node name="temple_stairs_1" parent="templo" instance=ExtResource("11_q2otl")]
+transform = Transform3D(-0.10747, 0, 0.380099, 0, 0.395, 0, -0.380099, 0, -0.10747, 0.922443, 1.02412, 14.703)
+
+[node name="temple_tiles_detail_1" parent="templo" instance=ExtResource("12_862sa")]
+transform = Transform3D(-0.373659, 0, -0.142754, 0, 0.4, 0, 0.142754, 0, -0.373659, 4.83276, 0.819976, 18.9489)
+
+[node name="temple_tiles_detail_9" parent="templo" instance=ExtResource("12_862sa")]
+transform = Transform3D(0.387865, 0, 0.0977774, 0, 0.4, 0, -0.0977774, 0, 0.387865, 1.87662, 0.819976, 10.6803)
+
+[node name="temple_tiles_detail_2" parent="templo" instance=ExtResource("2_xltr1")]
+transform = Transform3D(-0.384976, 0, -0.108596, 0, 0.4, 0, 0.108596, 0, -0.384976, 0.769897, 0.819976, 18.0572)
+
+[node name="temple_tiles_detail_4" parent="templo" instance=ExtResource("2_xltr1")]
+transform = Transform3D(0.387413, 0, 0.0995572, 0, 0.4, 0, -0.0995572, 0, 0.387413, -0.822857, 0.819977, 11.4354)
+
+[node name="luzes" type="Node3D" parent="."]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 6.17087, 0, -15.2917)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="luzes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.431318, 5.26845, 15.0187)
+light_color = Color(0, 0.529412, 0.901961, 1)
+light_energy = 16.0
+shadow_enabled = true
+shadow_bias = 7.7
+omni_range = 16.021
+omni_shadow_mode = 0

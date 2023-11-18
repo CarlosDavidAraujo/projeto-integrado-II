@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://qq1mn71fbpoa"]
+
+[ext_resource type="PackedScene" uid="uid://cmp4lebu2ekn1" path="res://Scenes/Player.tscn" id="1_phjtd"]
+[ext_resource type="PackedScene" uid="uid://cap7r5gvxah3x" path="res://Scenes/Wolf.tscn" id="2_irwla"]
+[ext_resource type="Script" path="res://Scripts/interface/PlayerHealthBar.gd" id="4_gmw6g"]
+[ext_resource type="PackedScene" uid="uid://dpwbgd3gvtfle" path="res://Scenes/pause_menu.tscn" id="4_ictlg"]
+[ext_resource type="PackedScene" uid="uid://cqxdr2yhulmfl" path="res://Scenes/bg.tscn" id="5_0wgpy"]
+
+[node name="Level1" type="Node"]
+process_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("1_phjtd")]
+transform = Transform3D(-1.74846e-07, 0.118665, 3.99824, 0, 3.99824, -0.118665, -4, -5.18701e-09, -1.74769e-07, -147.844, 0, 197.155)
+speed = 30.0
+max_health = 1000.0
+damage = 200.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PlayerHealthBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -48.0
+offset_right = 211.0
+offset_bottom = -21.0
+grow_vertical = 0
+script = ExtResource("4_gmw6g")
+player = NodePath("../../Player")
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_ictlg")]
+
+[node name="Wolf" parent="." instance=ExtResource("2_irwla")]
+transform = Transform3D(-3.22615, 0, 2.36473, 0, 4, 0, -2.36473, 0, -3.22615, 66.566, 0, -35.907)
+targetPath = NodePath("../Player")
+attack_range = 13.0
+maxHealth = 5000
+
+[node name="bg" parent="." instance=ExtResource("5_0wgpy")]
+transform = Transform3D(2.82843, 0, 2.82843, 0, 4, 0, -2.82843, 0, 2.82843, -63.811, 0, 74.084)

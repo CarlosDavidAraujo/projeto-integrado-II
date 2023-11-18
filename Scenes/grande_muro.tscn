@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://nm7hbarhn0jo"]
+
+[ext_resource type="PackedScene" uid="uid://bmkr6g26ix3ow" path="res://Scenes/Enviroment/externo/base/rocks/rock_big.tscn" id="1_ku6vn"]
+
+[node name="grande muro" type="Node3D"]
+
+[node name="pedras" type="Node3D" parent="."]
+transform = Transform3D(0.999926, 0, 0.0121298, 0, 1, 0, -0.0121298, 0, 0.999926, -2.15363, 0, -41.8244)
+
+[node name="pedra" parent="pedras" instance=ExtResource("1_ku6vn")]
+transform = Transform3D(-0.217544, 0, -1.4892, 0, 1.505, 0, 1.4892, 0, -0.217544, -19.8517, 13.1649, 41.9895)
+collision_layer = 4
+collision_mask = 0
+
+[node name="pedra2" parent="pedras" instance=ExtResource("1_ku6vn")]
+transform = Transform3D(-0.505894, -0.00752037, 1.41741, -1.31569e-07, -1.50498, -0.00798505, 1.41743, -0.00268423, 0.505887, -6.39231, 13.1649, 40.3969)
+collision_layer = 4
+collision_mask = 0
+
+[node name="pedras2" type="Node3D" parent="."]
+transform = Transform3D(0.945051, 0, -0.326921, 0, 1, 0, 0.326921, 0, 0.945051, 32.8265, 0, -35.6431)
+
+[node name="pedra" parent="pedras2" instance=ExtResource("1_ku6vn")]
+transform = Transform3D(0.591002, 0, -1.38411, 0, 1.505, 0, 1.38411, 0, 0.591002, -8.72647, 13.1649, 41.6998)
+collision_layer = 4
+collision_mask = 0

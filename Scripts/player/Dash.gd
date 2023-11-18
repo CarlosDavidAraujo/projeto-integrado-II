@@ -22,7 +22,8 @@ func physics_update(delta: float):
 		player.velocity = dash() 
 		dash_timer.start(dash_duration)
 		dash_cooldown.start(dash_cooldown_duration)
-
+	player.look_at_move_direction()
+	
 func dash() -> Vector3:
 	var input_vector = player.get_input_direction()
 	if not player.isMoving():
